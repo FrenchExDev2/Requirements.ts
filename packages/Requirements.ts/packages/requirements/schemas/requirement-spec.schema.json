@@ -1,0 +1,979 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schemaVersion": {
+      "$ref": "#/definitions/SchemaVersion"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "requirement"
+    },
+    "id": {
+      "$ref": "#/definitions/RequirementId"
+    },
+    "title": {
+      "type": "string"
+    },
+    "statement": {
+      "$ref": "#/definitions/EarsStatement"
+    },
+    "requirementKind": {
+      "$ref": "#/definitions/RequirementKind"
+    },
+    "priority": {
+      "$ref": "#/definitions/Priority"
+    },
+    "status": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/definitions/RequirementSource"
+    },
+    "rationale": {
+      "$ref": "#/definitions/Rationale"
+    },
+    "fitCriteria": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FitCriterion"
+      }
+    },
+    "verificationMethod": {
+      "$ref": "#/definitions/VerificationMethod"
+    },
+    "risk": {
+      "$ref": "#/definitions/Risk"
+    },
+    "refines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RequirementId"
+      }
+    },
+    "satisfiedBy": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FeatureId"
+      }
+    },
+    "tracedTo": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TracedTo"
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/HistoryEntry"
+      }
+    }
+  },
+  "required": [
+    "$schemaVersion",
+    "fitCriteria",
+    "id",
+    "kind",
+    "priority",
+    "rationale",
+    "requirementKind",
+    "risk",
+    "satisfiedBy",
+    "source",
+    "statement",
+    "status",
+    "title",
+    "verificationMethod"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "SchemaVersion": {
+      "type": "string",
+      "const": "2026-04-14"
+    },
+    "RequirementId": {
+      "type": "string"
+    },
+    "EarsStatement": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "ubiquitous"
+            },
+            "response": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "response"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "event-driven"
+            },
+            "trigger": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "response": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "trigger",
+            "response"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "state-driven"
+            },
+            "state": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "response": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "state",
+            "response"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "optional"
+            },
+            "feature": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "response": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "feature",
+            "response"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "unwanted"
+            },
+            "trigger": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "response": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "trigger",
+            "response"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "const": "natural"
+            },
+            "text": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "pattern",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "EARS notation (Mavin et al., Rolls-Royce 2009). Five typed patterns + natural fallback."
+    },
+    "Sentence": {
+      "type": "string"
+    },
+    "RequirementKind": {
+      "type": "string",
+      "enum": [
+        "Functional",
+        "NonFunctional",
+        "Constraint",
+        "Compliance",
+        "UserStory"
+      ]
+    },
+    "Priority": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "RequirementSource": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "stakeholder"
+            },
+            "role": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/definitions/IsoDate"
+            }
+          },
+          "required": [
+            "type",
+            "role",
+            "date"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "regulation"
+            },
+            "citation": {
+              "$ref": "#/definitions/Citation"
+            }
+          },
+          "required": [
+            "type",
+            "citation"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "standard"
+            },
+            "org": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "org",
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "contract"
+            },
+            "doc": {
+              "type": "string"
+            },
+            "clause": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "doc"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "risk"
+            },
+            "registerEntry": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "registerEntry",
+            "severity"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "business-goal"
+            },
+            "okrId": {
+              "type": "string"
+            },
+            "period": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "okrId",
+            "period"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "incident"
+            },
+            "incidentId": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/definitions/IsoDate"
+            },
+            "postmortemUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "incidentId",
+            "date"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "domain-knowledge"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Provenance — who/what authority asked for this Requirement."
+    },
+    "IsoDate": {
+      "type": "string"
+    },
+    "Citation": {
+      "type": "object",
+      "properties": {
+        "jurisdiction": {
+          "type": "string"
+        },
+        "act": {
+          "type": "string"
+        },
+        "article": {
+          "type": "string"
+        },
+        "paragraph": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "jurisdiction",
+        "act"
+      ],
+      "additionalProperties": false,
+      "description": "Parsed legal citation."
+    },
+    "Rationale": {
+      "type": "object",
+      "properties": {
+        "claim": {
+          "$ref": "#/definitions/Sentence"
+        },
+        "kind": {
+          "$ref": "#/definitions/RationaleKind"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Evidence"
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Sentence"
+          }
+        }
+      },
+      "required": [
+        "claim",
+        "kind",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "description": "Structured rationale — typed so auditors can grep for faith-based requirements."
+    },
+    "RationaleKind": {
+      "type": "string",
+      "enum": [
+        "evidence-based",
+        "principle",
+        "value-driven",
+        "regulatory-compliance",
+        "risk-mitigation",
+        "precedent"
+      ]
+    },
+    "Evidence": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "metric"
+            },
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/definitions/IsoDate"
+            },
+            "sourceUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "name",
+            "value",
+            "date"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "incident"
+            },
+            "ref": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/definitions/IsoDate"
+            },
+            "postmortemUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "ref",
+            "date"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "study"
+            },
+            "title": {
+              "type": "string"
+            },
+            "authors": {
+              "type": "string"
+            },
+            "year": {
+              "type": "number"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "title",
+            "authors",
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "expert-opinion"
+            },
+            "expert": {
+              "type": "string"
+            },
+            "recordedAt": {
+              "$ref": "#/definitions/IsoDate"
+            }
+          },
+          "required": [
+            "kind",
+            "expert",
+            "recordedAt"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "precedent"
+            },
+            "requirement": {
+              "$ref": "#/definitions/RequirementId"
+            },
+            "rationale": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "requirement",
+            "rationale"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "FitCriterion": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "unit-test"
+            },
+            "describes": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "binds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AcName"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "describes",
+            "binds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "coverage-threshold"
+            },
+            "metric": {
+              "type": "string",
+              "enum": [
+                "line",
+                "branch",
+                "mutation"
+              ]
+            },
+            "min": {
+              "$ref": "#/definitions/Percentage"
+            },
+            "scope": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "metric",
+            "min",
+            "scope"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "quality-gate"
+            },
+            "tool": {
+              "type": "string"
+            },
+            "rule": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "tool",
+            "rule"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "metric"
+            },
+            "name": {
+              "type": "string"
+            },
+            "query": {
+              "type": "string"
+            },
+            "operator": {
+              "type": "string",
+              "enum": [
+                "<",
+                "<=",
+                "=",
+                ">=",
+                ">"
+              ]
+            },
+            "threshold": {
+              "type": "number"
+            },
+            "window": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "name",
+            "query",
+            "operator",
+            "threshold"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "inspection"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Sentence"
+              }
+            },
+            "reviewers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "checklist",
+            "reviewers"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "demonstration"
+            },
+            "scenario": {
+              "$ref": "#/definitions/Sentence"
+            },
+            "recordingUrl": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "scenario"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "narrative"
+            },
+            "text": {
+              "$ref": "#/definitions/Sentence"
+            }
+          },
+          "required": [
+            "kind",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "AcName": {
+      "type": "string"
+    },
+    "Percentage": {
+      "type": "number"
+    },
+    "VerificationMethod": {
+      "type": "string",
+      "enum": [
+        "Test",
+        "Inspection",
+        "Analysis",
+        "Demonstration"
+      ]
+    },
+    "Risk": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "ifNotMet": {
+          "$ref": "#/definitions/Sentence"
+        },
+        "mitigations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Sentence"
+          }
+        }
+      },
+      "required": [
+        "level",
+        "ifNotMet"
+      ],
+      "additionalProperties": false
+    },
+    "FeatureId": {
+      "type": "string"
+    },
+    "TracedTo": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "const": "linear"
+            },
+            "ticket": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "system",
+            "ticket"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "const": "github"
+            },
+            "org": {
+              "type": "string"
+            },
+            "repo": {
+              "type": "string"
+            },
+            "issue": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "system",
+            "org",
+            "repo",
+            "issue"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "const": "notion"
+            },
+            "pageId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "system",
+            "pageId"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "const": "jira"
+            },
+            "project": {
+              "type": "string"
+            },
+            "issue": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "system",
+            "project",
+            "issue"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "system": {
+              "type": "string",
+              "const": "url"
+            },
+            "href": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "system",
+            "href"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "Opaque external link."
+    },
+    "HistoryEntry": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/IsoDate"
+        },
+        "author": {
+          "type": "string"
+        },
+        "change": {
+          "$ref": "#/definitions/ChangeKind"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "author",
+        "change",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "description": "Append-only audit trail entry."
+    },
+    "ChangeKind": {
+      "type": "string",
+      "enum": [
+        "Created",
+        "StatusChanged",
+        "StatementEdited",
+        "AcAdded",
+        "AcRemoved",
+        "AcRenamed",
+        "SatisfiedByChanged",
+        "FitCriterionAdded",
+        "FitCriterionRemoved",
+        "RiskReassessed",
+        "RationaleUpdated",
+        "Deprecated"
+      ]
+    }
+  }
+}

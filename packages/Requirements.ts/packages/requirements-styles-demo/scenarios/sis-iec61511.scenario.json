@@ -1,0 +1,74 @@
+{
+  "$schema": "../schemas/scenario.schema.json",
+  "$schemaVersion": "2026-04-14",
+  "id": "sis-iec61511-fired-heater",
+  "title": "Fired-heater SIS — IEC 61511 SIL2 (IndustrialStyle)",
+  "description": "Story: a process-safety scenario for a refinery fired heater. HAZOP identifies three hazards — high skin temperature, loss of fuel-gas pressure, and pilot flame failure — each mitigated by a dedicated Safety Instrumented Function (SIF) targeting SIL2 per IEC 61511. Alarms follow ISA-18.2. Demonstrates IndustrialStyle: SIL-graded Requirements, trip-logic Features, proof-test intervals as fit criteria. Ten ACs total across functional/unit/e2e levels.",
+  "style": "industrial",
+  "seeds": {
+    "requirements": [
+      {
+        "id": "REQ-SIS-HIGH-SKIN-TEMP",
+        "title": "High heater-skin temperature must trigger fuel isolation (SIL2)",
+        "kind": "safety",
+        "template": "iec61511-sif",
+        "satisfiedByFeatureIds": ["SIF-HIGH-SKIN-TEMP"]
+      },
+      {
+        "id": "REQ-SIS-LOW-FUEL-PRESSURE",
+        "title": "Low fuel-gas pressure must trigger burner shutoff (SIL2)",
+        "kind": "safety",
+        "template": "iec61511-sif",
+        "satisfiedByFeatureIds": ["SIF-LOW-FUEL-PRESSURE"]
+      },
+      {
+        "id": "REQ-SIS-PILOT-FLAME-FAIL",
+        "title": "Loss of pilot flame must trigger main-burner isolation (SIL2)",
+        "kind": "safety",
+        "template": "iec61511-sif",
+        "satisfiedByFeatureIds": ["SIF-PILOT-FLAME-FAIL"]
+      }
+    ],
+    "features": [
+      {
+        "id": "SIF-HIGH-SKIN-TEMP",
+        "title": "SIF — high skin temperature: 2oo3 thermocouple vote -> ESD valve close",
+        "priority": "critical",
+        "satisfies": ["REQ-SIS-HIGH-SKIN-TEMP"],
+        "acs": [
+          { "name": "twoOutOfThreeVoteTriggersTrip", "expects": ["unit", "functional"] },
+          { "name": "proofTestIntervalEveryTwelveMonths", "expects": ["functional"] },
+          { "name": "alarmPriorityIsaEighteenTwoCritical", "expects": ["unit"] }
+        ]
+      },
+      {
+        "id": "SIF-LOW-FUEL-PRESSURE",
+        "title": "SIF — low fuel-gas pressure: pressure-transmitter low-low -> burner isolation",
+        "priority": "critical",
+        "satisfies": ["REQ-SIS-LOW-FUEL-PRESSURE"],
+        "acs": [
+          { "name": "lowLowSetpointAtThirtyPercent", "expects": ["unit"] },
+          { "name": "tripWithinOneHundredMs", "expects": ["functional", "perf"] },
+          { "name": "bypassRequiresKeyedSwitch", "expects": ["e2e"] }
+        ]
+      },
+      {
+        "id": "SIF-PILOT-FLAME-FAIL",
+        "title": "SIF — pilot flame failure: UV-IR detector loss -> main burner isolation",
+        "priority": "critical",
+        "satisfies": ["REQ-SIS-PILOT-FLAME-FAIL"],
+        "acs": [
+          { "name": "flameLossDetectedWithinThreeSeconds", "expects": ["functional"] },
+          { "name": "manualResetRequiredAfterTrip", "expects": ["e2e"] },
+          { "name": "sequenceOfEventsRecorded", "expects": ["unit"] },
+          { "name": "sif61511ArchitectureTypeB", "expects": ["unit"] }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "intro": "Fired-heater SIS — IEC 61511 SIL2 demo. Three HAZOP-derived SIFs, ISA-18.2 alarms.",
+    "outro": "All SIFs verified: 2oo3 voting, proof-test interval, manual reset. SIL2 target met.",
+    "stepDelayMs": 200
+  }
+}

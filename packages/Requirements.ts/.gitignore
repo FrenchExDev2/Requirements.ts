@@ -1,0 +1,28 @@
+node_modules/
+dist/
+coverage/
+test-results/
+reports/
+.cache/
+.build-cache/
+.artifacts/
+.tmp/
+.stryker-tmp*/
+.stryker-incremental*.json
+.req-smoke-*/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db
+provenance/
+audits/
+.local-packages/
+
+
+# Local dependency snapshots are no longer part of the npm release inputs.
+vendor/packages/
+
+# In-progress dependency profile transaction with recovery snapshots.
+.pnpm-profile.json

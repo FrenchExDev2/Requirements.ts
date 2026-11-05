@@ -1,0 +1,85 @@
+{
+  "name": "@frenchexdev2/requirements-styles",
+  "version": "0.1.0",
+  "description": "Built-in RequirementStyle presets (Default/Industrial/Lean/Agile/Kanban) + StyleRegistry for @frenchexdev2/requirements.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./default": {
+      "source": "./src/default.ts",
+      "types": "./dist/default.d.ts",
+      "import": "./dist/default.js",
+      "default": "./dist/default.js"
+    },
+    "./industrial": {
+      "source": "./src/industrial.ts",
+      "types": "./dist/industrial.d.ts",
+      "import": "./dist/industrial.js",
+      "default": "./dist/industrial.js"
+    },
+    "./lean": {
+      "source": "./src/lean.ts",
+      "types": "./dist/lean.d.ts",
+      "import": "./dist/lean.js",
+      "default": "./dist/lean.js"
+    },
+    "./agile": {
+      "source": "./src/agile.ts",
+      "types": "./dist/agile.d.ts",
+      "import": "./dist/agile.js",
+      "default": "./dist/agile.js"
+    },
+    "./kanban": {
+      "source": "./src/kanban.ts",
+      "types": "./dist/kanban.d.ts",
+      "import": "./dist/kanban.js",
+      "default": "./dist/kanban.js"
+    },
+    "./registry": {
+      "source": "./src/registry.ts",
+      "types": "./dist/registry.d.ts",
+      "import": "./dist/registry.js",
+      "default": "./dist/registry.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@frenchexdev2/requirements-requirements": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "docs/pitches/**/*.md"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-styles"
+  }
+}

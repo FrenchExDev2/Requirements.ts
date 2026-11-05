@@ -1,0 +1,708 @@
+{
+  "DemoBarrelSmokeFeature": {
+    "barrelExportsOrchestrator": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ],
+    "barrelExportsScenarioCommands": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ],
+    "barrelExportsThreeFsms": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ]
+  },
+  "SCENARIO-AI-ADAPTER": {
+    "aiAdapterPortExposesImplementAcMethod": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "StubAiAdapter"
+      }
+    ],
+    "aiAdapterPortIsDefinedInPortsModule": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "StubAiAdapter"
+      }
+    ],
+    "aiAdapterPortReturnsStructuredSourceResult": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "StubAiAdapter"
+      }
+    ],
+    "claudeAdapterEmitsTelemetryOnCacheHitMiss": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "ClaudeAiAdapter"
+      }
+    ],
+    "claudeAdapterEnablesPromptCachingByDefault": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "ClaudeAiAdapter"
+      },
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "DEFAULT_CLAUDE_MODEL"
+      }
+    ],
+    "claudeAdapterRespectsApiKeyFromEnv": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "ClaudeAiAdapter"
+      }
+    ],
+    "claudeAdapterRetriesOnTransientErrors": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "ClaudeAiAdapter"
+      }
+    ],
+    "stubAdapterIsSelectedWhenAiFlagAbsent": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "selectAdapter"
+      }
+    ],
+    "stubAdapterPerformsNoNetworkIo": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "StubAiAdapter"
+      }
+    ],
+    "stubAdapterReturnsDeterministicThrowStub": [
+      {
+        "file": "src/ai-adapter.ts",
+        "symbol": "StubAiAdapter"
+      }
+    ]
+  },
+  "SCENARIO-EXPORT": {
+    "exportIncludesComplianceReport": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ],
+    "exportIncludesFsmTransitionMermaid": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ],
+    "exportIncludesNarrationBlocks": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ],
+    "exportProducesMarkdownArtifact": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ],
+    "exportProducesPdfArtifact": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ],
+    "exportRefusesOverwriteWithoutForce": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "exportScenario"
+      }
+    ]
+  },
+  "SCENARIO-INSPECT": {
+    "inspectAnnotatesTransitionsWithEventAndGuard": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectPerformsNoFileWrite": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectPrintsExpectedArtifactPaths": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectPrintsPerAcTransitions": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectPrintsPerFeatureTransitions": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectPrintsProjectLifecycleTransitions": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ],
+    "inspectSupportsMermaidOutputFlag": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "inspectScenario"
+      }
+    ]
+  },
+  "SCENARIO-LIST": {
+    "listEmptyRegistryPrintsHelpfulHint": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "renderListText"
+      }
+    ],
+    "listIncludesBuiltInScenarii": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      }
+    ],
+    "listIncludesProjectDefinedScenarii": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      }
+    ],
+    "listOrdersAlphabeticallyById": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      }
+    ],
+    "listPrintsIdTitleStyleTriple": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "renderListText"
+      }
+    ],
+    "listSupportsJsonOutputFlag": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "listScenarios"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "renderListJson"
+      }
+    ]
+  },
+  "SCENARIO-ORCHESTRATOR": {
+    "allAcsDoneTransitionsToVerifying": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "anyStepFailureTransitionsToFailed": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "deriveFeaturesTransitionsToFeaturesDerived": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "everyPerAcTransitionIsTested": [
+      {
+        "file": "src/per-ac-fsm.ts",
+        "symbol": "PerAcFsm"
+      }
+    ],
+    "everyPerFeatureTransitionIsTested": [
+      {
+        "file": "src/per-feature-fsm.ts",
+        "symbol": "PerFeatureFsm"
+      }
+    ],
+    "everyProjectLifecycleTransitionIsTested": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "PROJECT_LIFECYCLE_TRANSITIONS"
+      },
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "generateRequirementsTransitionsSeededToRequirementsDrafted": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "implementTransitionsToImplementing": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "loadScenarioTransitionsEmptyToSeeded": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "orchestratorAppendsEveryEventToReplayLog": [
+      {
+        "file": "src/orchestrator.ts",
+        "symbol": "ScenarioOrchestrator"
+      }
+    ],
+    "orchestratorCrossCouplingIsEventsOnly": [
+      {
+        "file": "src/event-bridge.ts",
+        "symbol": "makeOrchestratorEventAdapter"
+      },
+      {
+        "file": "src/orchestrator-port.ts",
+        "symbol": "makeScenarioOrchestratorPort"
+      },
+      {
+        "file": "src/orchestrator-port.ts",
+        "symbol": "normaliseEventsToPlanSteps"
+      },
+      {
+        "file": "src/orchestrator.ts",
+        "symbol": "ScenarioOrchestrator"
+      }
+    ],
+    "orchestratorIsDeterministicUnderFixedSeed": [
+      {
+        "file": "src/orchestrator.ts",
+        "symbol": "ScenarioOrchestrator"
+      }
+    ],
+    "orchestratorReplaysFromLogProducesIdenticalFinalStates": [
+      {
+        "file": "src/orchestrator.ts",
+        "symbol": "ScenarioOrchestrator"
+      }
+    ],
+    "perAcFiresAcImplementedOnTestPassing": [
+      {
+        "file": "src/per-ac-fsm.ts",
+        "symbol": "PerAcFsm"
+      }
+    ],
+    "perAcSpawnsOnePerAc": [
+      {
+        "file": "src/per-ac-fsm.ts",
+        "symbol": "PerAcFsm"
+      }
+    ],
+    "perFeatureAggregatesAcImplementedCount": [
+      {
+        "file": "src/per-feature-fsm.ts",
+        "symbol": "PerFeatureFsm"
+      }
+    ],
+    "perFeatureSpawnsOnePerFeatureSeed": [
+      {
+        "file": "src/per-feature-fsm.ts",
+        "symbol": "PerFeatureFsm"
+      }
+    ],
+    "projectLifecycleStartsInEmpty": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "scaffoldTransitionsToScaffoldingReady": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ],
+    "verifyTransitionsVerifyingToPublished": [
+      {
+        "file": "src/project-lifecycle-fsm.ts",
+        "symbol": "ProjectLifecycleFsm"
+      }
+    ]
+  },
+  "SCENARIO-PLAY": {
+    "scenarioPlayAssertsExpectedArtifactsExist": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayDispatchesToOrchestrator": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      },
+      {
+        "file": "src/event-bridge.ts",
+        "symbol": "makeOrchestratorEventAdapter"
+      },
+      {
+        "file": "src/orchestrator-port.ts",
+        "symbol": "makeScenarioOrchestratorPort"
+      }
+    ],
+    "scenarioPlayDryRunPrintsWithoutWriting": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayEmitsIntroNarration": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      },
+      {
+        "file": "src/ui.ts",
+        "symbol": "startScenarioUi"
+      }
+    ],
+    "scenarioPlayEmitsOutroNarration": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      },
+      {
+        "file": "src/ui.ts",
+        "symbol": "makeScenarioUi"
+      }
+    ],
+    "scenarioPlayHonoursAiFlag": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "BUILT_IN_STYLE_NAMES"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayLoadsScenarioJson": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayNoAiFlagEmitsDeterministicStubs": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayProducesFourTierProject": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayRejectsDanglingForwardReferences": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayRejectsUnknownStyle": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayRespectsStepDelayMs": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      },
+      {
+        "file": "src/ui.ts",
+        "symbol": "labelFor"
+      },
+      {
+        "file": "src/ui.ts",
+        "symbol": "makeScenarioUi"
+      },
+      {
+        "file": "src/ui.ts",
+        "symbol": "routeEvent"
+      }
+    ],
+    "scenarioPlayRunsComplianceStrictAtEnd": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlaySeedFlagMakesRunDeterministic": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ],
+    "scenarioPlayValidatesAgainstSchema": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "computeFallbackPlan"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "playScenario"
+      }
+    ]
+  },
+  "SCENARIO-RECORD": {
+    "recordCapturesFromExistingProject": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordCapturesInteractiveWizardSession": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromInteractive"
+      }
+    ],
+    "recordEmitsSchemaVersionedJson": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordIncludesExpectsPerAc": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordIncludesSatisfiesForwardReferences": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordOutputPassesValidateCommand": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "recordRefusesOverwriteWithoutForce": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromInteractive"
+      },
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordReplayFidelityProducesIdenticalArtifacts": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ],
+    "recordSupportsPartialSeedingFromFeaturesOnly": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "recordFromProject"
+      }
+    ]
+  },
+  "SCENARIO-VALIDATE": {
+    "validateAcceptsWellFormedScenario": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateCrossChecksSatisfiedByForwardReferences": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateCrossChecksSatisfiesForwardReferences": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateExitsNonZeroOnFailure": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validatePerformsNoFileWrite": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateRejectsDuplicateIds": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateRejectsMissingRequiredFields": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ],
+    "validateReportsAjvErrorsInFriendlyFormat": [
+      {
+        "file": "src/commands.ts",
+        "symbol": "validateScenario"
+      }
+    ]
+  }
+}

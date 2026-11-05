@@ -1,0 +1,72 @@
+{
+  "$schema": "../schemas/scenario.schema.json",
+  "$schemaVersion": "2026-04-14",
+  "id": "a3-kaizen-deploy-leadtime",
+  "title": "A3 Kaizen — reduce deployment lead time (LeanStyle)",
+  "description": "Story: a Lean A3 problem-solving cycle on deployment lead time. The current state measures 6 hours end-to-end; the target is 30 minutes. Three Requirements capture the PDCA triad: Problem-Statement (the gap), Countermeasure (the change), Standard-Work (the new baseline). Each maps to a Feature exercising the kaizen loop. Eight ACs total, measured at unit/functional/perf levels. Demonstrates LeanStyle: Toyota/A3/Gemba vocabulary, value-stream fit criteria, standard-work artifacts.",
+  "style": "lean",
+  "seeds": {
+    "requirements": [
+      {
+        "id": "REQ-KZN-PROBLEM-STATEMENT",
+        "title": "Problem: deployment lead time is 6h (target 30min)",
+        "kind": "problem-statement",
+        "template": "a3-problem",
+        "satisfiedByFeatureIds": ["A3-MEASURE"]
+      },
+      {
+        "id": "REQ-KZN-COUNTERMEASURE",
+        "title": "Countermeasure: parallelise build + cache dependencies",
+        "kind": "countermeasure",
+        "template": "a3-countermeasure",
+        "satisfiedByFeatureIds": ["A3-COUNTERMEASURE"]
+      },
+      {
+        "id": "REQ-KZN-STANDARD-WORK",
+        "title": "Standard work: new deploy playbook, daily Gemba walk",
+        "kind": "standard-work",
+        "template": "a3-standard-work",
+        "satisfiedByFeatureIds": ["A3-STANDARDWORK"]
+      }
+    ],
+    "features": [
+      {
+        "id": "A3-MEASURE",
+        "title": "Measure current state — VSM of deployment pipeline",
+        "priority": "high",
+        "satisfies": ["REQ-KZN-PROBLEM-STATEMENT"],
+        "acs": [
+          { "name": "vsmCapturesEveryStageDuration", "expects": ["unit"] },
+          { "name": "baselineLeadTimeIsSixHours", "expects": ["functional"] },
+          { "name": "paretoIdentifiesTopThreeWastes", "expects": ["unit"] }
+        ]
+      },
+      {
+        "id": "A3-COUNTERMEASURE",
+        "title": "Apply countermeasure — parallel build + dep cache",
+        "priority": "critical",
+        "satisfies": ["REQ-KZN-COUNTERMEASURE"],
+        "acs": [
+          { "name": "buildParallelisedToFourWorkers", "expects": ["unit"] },
+          { "name": "depCacheHitRatioAboveEighty", "expects": ["perf"] },
+          { "name": "newLeadTimeUnderThirtyMinutes", "expects": ["perf", "functional"] }
+        ]
+      },
+      {
+        "id": "A3-STANDARDWORK",
+        "title": "Lock in gains — standard work + daily Gemba",
+        "priority": "medium",
+        "satisfies": ["REQ-KZN-STANDARD-WORK"],
+        "acs": [
+          { "name": "deployPlaybookPublished", "expects": ["unit"] },
+          { "name": "gembaWalkLogExistsDaily", "expects": ["functional"] }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "intro": "A3 Kaizen — LeanStyle demo. Deploy lead time 6h -> 30min via PDCA.",
+    "outro": "Standard work in place, Gemba walks scheduled. Gains locked in.",
+    "stepDelayMs": 150
+  }
+}

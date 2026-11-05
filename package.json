@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "devDependencies": {
+    "@typescript/native": "npm:typescript@7.0.2",
+    "@frenchexdev2/requirements": "workspace:*",
+    "@types/node": "catalog:",
+    "@stryker-mutator/core": "catalog:",
+    "@stryker-mutator/typescript-checker": "catalog:",
+    "@stryker-mutator/vitest-runner": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "fast-check": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@frenchexdev2/ts-codegen-pipeline": "0.0.1",
+    "@frenchexdev2/requirements-shared-kernel": "workspace:^"
+  },
+  "author": "Stéphane ERARD",
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
+  "license": "Copyright (c) 2026 Stéphane ERARD. All rights reserved.",
+  "type": "module",
+  "description": "Multi-project Requirements-as-Code monorepo",
+  "name": "@frenchexdev2/requirements-monorepo",
+  "engines": {
+    "node": "^22.22.0 || ^24.0.0 || >=26.0.0"
+  },
+  "scripts": {
+    "build": "pnpm -r --workspace-concurrency=4 run build",
+    "test": "pnpm -r --workspace-concurrency=4 --no-bail run --if-present test --maxWorkers=2",
+    "test:monorepo": "node --test test/monorepo.test.mjs",
+    "test:release": "node --test test/release.test.mjs packages/Requirements.ts/test/release.test.mjs packages/Requirements.SharedKernel.ts/test/release.test.mjs",
+    "test:integration": "pnpm --dir packages/Requirements.ts run test:integration",
+    "test:ci": "pnpm run test:monorepo && pnpm run test:release && pnpm run build && pnpm run test && pnpm run test:integration",
+    "typecheck:tests": "pnpm --dir packages/Requirements.ts run typecheck:tests",
+    "deps:dev": "node scripts/dependencies.mjs dev",
+    "deps:prod": "node scripts/dependencies.mjs prod",
+    "deps:lock:dev": "node scripts/dependencies.mjs dev --lockfile-only --no-frozen-lockfile --ignore-scripts",
+    "deps:lock:prod": "node scripts/dependencies.mjs prod --lockfile-only --no-frozen-lockfile --ignore-scripts",
+    "deps:recover": "node scripts/dependencies.mjs recover",
+    "release:prepare": "node scripts/release.mjs prepare",
+    "release:check": "node scripts/release.mjs check"
+  },
+  "private": true
+}

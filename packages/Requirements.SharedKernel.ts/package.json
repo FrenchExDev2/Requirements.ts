@@ -1,0 +1,30 @@
+{
+  "name": "@frenchexdev2/shared-kernel-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone TypeScript workspace for @frenchexdev2/requirements-shared-kernel",
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
+  "author": "Stéphane ERARD",
+  "engines": {
+    "node": "^22.22.0 || ^24.0.0 || >=26.0.0"
+  },
+  "license": "Copyright (c) 2026 Stéphane ERARD. All rights reserved.",
+  "scripts": {
+    "build": "pnpm -r --workspace-concurrency=4 run build",
+    "test": "pnpm -r --workspace-concurrency=4 --no-bail run --if-present test --maxWorkers=2",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "test:ci": "pnpm run build && pnpm run test",
+    "test:release": "node --test test/release.test.mjs",
+    "release:prepare": "node scripts/release.mjs prepare",
+    "release:check": "node scripts/release.mjs check"
+  },
+  "devDependencies": {
+    "@typescript/native": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@frenchexdev2/requirements-shared-kernel": "workspace:*"
+  }
+}

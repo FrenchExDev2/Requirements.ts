@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schemaVersion": {
+      "$ref": "#/definitions/SchemaVersion"
+    },
+    "$schema": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "const": "feature"
+    },
+    "id": {
+      "$ref": "#/definitions/FeatureId"
+    },
+    "title": {
+      "type": "string"
+    },
+    "priority": {
+      "$ref": "#/definitions/Priority"
+    },
+    "satisfies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RequirementId"
+      }
+    },
+    "acs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AcSpec"
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/HistoryEntry"
+      }
+    }
+  },
+  "required": [
+    "$schemaVersion",
+    "acs",
+    "id",
+    "kind",
+    "priority",
+    "title"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "SchemaVersion": {
+      "type": "string",
+      "const": "2026-04-14"
+    },
+    "FeatureId": {
+      "type": "string"
+    },
+    "Priority": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "RequirementId": {
+      "type": "string"
+    },
+    "AcSpec": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/AcName"
+        },
+        "expects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TestLevel"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "expects"
+      ],
+      "additionalProperties": false
+    },
+    "AcName": {
+      "type": "string"
+    },
+    "TestLevel": {
+      "type": "string",
+      "enum": [
+        "unit",
+        "functional",
+        "e2e",
+        "a11y",
+        "i18n",
+        "visual",
+        "perf"
+      ]
+    },
+    "HistoryEntry": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/IsoDate"
+        },
+        "author": {
+          "type": "string"
+        },
+        "change": {
+          "$ref": "#/definitions/ChangeKind"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "author",
+        "change",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "description": "Append-only audit trail entry."
+    },
+    "IsoDate": {
+      "type": "string"
+    },
+    "ChangeKind": {
+      "type": "string",
+      "enum": [
+        "Created",
+        "StatusChanged",
+        "StatementEdited",
+        "AcAdded",
+        "AcRemoved",
+        "AcRenamed",
+        "SatisfiedByChanged",
+        "FitCriterionAdded",
+        "FitCriterionRemoved",
+        "RiskReassessed",
+        "RationaleUpdated",
+        "Deprecated"
+      ]
+    }
+  }
+}

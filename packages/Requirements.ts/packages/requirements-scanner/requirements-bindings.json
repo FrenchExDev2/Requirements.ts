@@ -1,0 +1,640 @@
+{
+  "TEST-BINDINGS-SCANNER": {
+    "addsClassEvenWhenNoMethodsHaveBindings": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "aggregateDedupesTargetsByFileAndSymbol": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateFallsBackToClassNameWhenNoIdMapping": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateMergesTargetsAcrossClassesForSameAc": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregatePropagatesParserWarnings": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateRecordsEmptyMethods": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateUsesClassToIdMapping": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregatesMultipleClassesIntoManifest": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "appendsTsExtensionWhenMissing": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "buildsFileExistsPredicateOverConfiguredScopes": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "buildFileExistsPredicate"
+      }
+    ],
+    "collectCalleeNamesEmptyWhenNoBody": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesFindsCallExpressions": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesFindsNewExpressions": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesIgnoresNonCallChildren": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectClassHelpersExcludesVerifiesMethods": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectClassHelpersIgnoresAbstractOrComputedNames": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectClassHelpersIncludesNonVerifiesMethods": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectLocalHelpersIgnoresFunctionDeclarationsWithoutBody": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersIgnoresNonFunctionVariables": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksArrowFunctionAssignments": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksFunctionDeclarations": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksFunctionExpressionAssignments": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectReferencedNamesEmptyWhenNoBody": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesGathersBareIdentifiers": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsDeclarationLhs": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsLabels": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsObjectKey": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsPropertyAccessName": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsTypeNodes": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectTestFilesHandlesUnreadableDir": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectTestFilesReturnsSorted": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectTestFilesSkipsUnstatableEntries": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectsDefaultImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsNamedImports": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsNamespaceImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsTestFilesByExtension": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectsTestFilesRecursively": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "dedupesSymbolsWithinMethod": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "detectsTypeCheckOnlyDecoratorOnMethod": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "hasTypeCheckOnlyDecorator"
+      }
+    ],
+    "diffEmptyForIdenticalManifests": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsAcsOnlyInInferred": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsAcsOnlyInManual": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsFeaturesOnlyInInferred": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsFeaturesOnlyInManual": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsSymbolsOnlyInInferred": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsSymbolsOnlyInManual": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffWalksAcsOfFeaturesOnlyInInferred": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "emitsEmptyTargetsWhenNoMatchingImports": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "emitsStarSymbolForDynamicImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectDynamicImportTargets"
+      }
+    ],
+    "extractsAllVerifiesArgsFromMethod": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "extractsFeatureTestArgIdentifier": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "fallsBackToBarrelWhenPrimaryFileDoesNotExist": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "fallsBackToBarrelWhenPrimaryOutOfScope": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "fileExistsPredicateReturnsFalseForUnknownPath": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "buildFileExistsPredicate"
+      }
+    ],
+    "getRootIdentifierReturnsNullForLiteral": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughCallChain": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughElementAccess": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughNonNullAndAs": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughParentheses": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughPropertyAccess": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "handlesClassWithNoModifiers": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "handlesMethodWithStringLiteralName": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "ignoresBareModuleDynamicImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectDynamicImportTargets"
+      }
+    ],
+    "ignoresNonStringLiteralDynamicImportArg": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectDynamicImportTargets"
+      }
+    ],
+    "ignoresOutOfScopeDynamicImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectDynamicImportTargets"
+      }
+    ],
+    "isInScopeReturnsFalseForNoMatch": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "isInScope"
+      }
+    ],
+    "isInScopeReturnsTrueForMatch": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "isInScope"
+      }
+    ],
+    "mapsJsExtensionToTsForNodeNextImports": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "parsesFeatureTestDecoratedClass": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "preservesExistingTsExtension": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "resolvesBarrelImportToIndexTs": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveBarrelTarget"
+      }
+    ],
+    "resolvesRelativeImportToRelPath": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "returnsFalseWhenTypeCheckOnlyAbsent": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "hasTypeCheckOnlyDecorator"
+      }
+    ],
+    "returnsNullForBareModuleSpecifier": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "returnsNullForBarrelTargetOnBareModule": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveBarrelTarget"
+      }
+    ],
+    "returnsNullForBarrelTargetWhenSpecHasExtension": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "resolveBarrelTarget"
+      }
+    ],
+    "returnsNullWhenDecoratorNameIsNotFeatureTest": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "returnsNullWhenFeatureTestArgNotIdentifier": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "returnsNullWhenFeatureTestHasNoCallExpression": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "scanResolvesAbsoluteAndRelativeTestDirs": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanRespectsCustomIncludeScopes": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanReturnsAggregatedManifestStats": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanSkipsUnreadableFiles": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "skipsAnonymousClass": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsClassWithoutFeatureTestDecorator": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsImportWithoutClause": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsMethodWithoutVerifiesDecorator": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsNonClassDeclarations": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsNonImportStatements": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsNonMethodMembers": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsTypeOnlyImport": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsTypeOnlyNamedSpecifiers": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsVerifiesIfDecoratorNameDiffers": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "skipsVerifiesWithoutCallExpression": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "skipsVerifiesWithoutStringLiteralArg": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "sortManifestSortsAcsWithinFeature": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "sortManifestSortsFeatureIds": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "sortManifestSortsTargetsByFileThenSymbol": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "tracksDynamicImportFromMethodBody": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectDynamicImportTargets"
+      }
+    ],
+    "transitiveBreaksCyclesViaVisitedSet": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ],
+    "transitiveResolvesThroughLocalHelper": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ],
+    "transitiveResolvesThroughThisCallToClassHelper": [
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      },
+      {
+        "file": "src/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ]
+  }
+}

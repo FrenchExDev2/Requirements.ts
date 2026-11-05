@@ -1,0 +1,527 @@
+{
+  "CLACK-ADAPTER": {
+    "confirmCancellationThrowsPromptCancelledError": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      },
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "multiselectCancellationThrowsPromptCancelledError": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      },
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "openInEditorIsNoOpOnEmptyPathList": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "openInEditor"
+      }
+    ],
+    "openInEditorQuotesPathsForShellSafety": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "openInEditor"
+      }
+    ],
+    "openInEditorShellsThroughCommandRunnerPort": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "openInEditor"
+      }
+    ],
+    "openInEditorSilentlySwallowsRunnerFailures": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "openInEditor"
+      }
+    ],
+    "promptCancelledErrorAcceptsCustomMessage": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      }
+    ],
+    "promptCancelledErrorExtendsError": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      }
+    ],
+    "realPromptConfirmDelegatesToClackConfirm": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptExposesAllPromptMethods": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptMultiselectDelegatesToClackMultiselect": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptNoteDelegatesToClackNote": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptSelectDelegatesToClackSelect": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptSpinnerDelegatesToClackSpinner": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "realPromptTextDelegatesToClackText": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "selectCancellationThrowsPromptCancelledError": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      },
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ],
+    "textCancellationThrowsPromptCancelledError": [
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "PromptCancelledError"
+      },
+      {
+        "file": "src/cli/prompt-shell.ts",
+        "symbol": "realPrompt"
+      }
+    ]
+  },
+  "FEATURE-TRACE-EXPLORER-TUI": {
+    "endToEndNavigatesReqToFeatToAcToTest": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "listAt"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "viewTitle"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerActionPromptPluralizesItemCount": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "formatActionPrompt"
+      }
+    ],
+    "traceExplorerBuildsGraph": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "readTestRegistry"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerCursorMarkerHighlightsActiveLine": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "renderListLine"
+      }
+    ],
+    "traceExplorerDrillsDownFromAnyNode": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "listAt"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerEmptyStateRendersHelpfulMessage": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "EMPTY_LINE"
+      }
+    ],
+    "traceExplorerErrorMessagePrefixesWithCommandName": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "formatErrorMessage"
+      }
+    ],
+    "traceExplorerExitsCleanlyOnCtrlC": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerHandlesArrowKeyNavigation": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerJumpsBackUpWithBackspace": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerKeyChoicesIncludeAllNavigationActions": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "KEY_CHOICES"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      }
+    ],
+    "traceExplorerOpensHelpOverlayOnQuestionMark": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "buildTraceGraph"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "HELP_LINES"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "initialState"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "keyToEvent"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "listAt"
+      },
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "step"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerRefusesToStartOnNonTty": [
+      {
+        "file": "src/cli/explore-shell.ts",
+        "symbol": "runExploreCli"
+      }
+    ],
+    "traceExplorerUsesFileSystemPortForDiscovery": [
+      {
+        "file": "src/cli/explore-core.ts",
+        "symbol": "loadSpecsViaFileSystem"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "traceExplorerUsesPromptPortForInteraction": [
+      {
+        "file": "src/cli/explore-shell.ts",
+        "symbol": "runExploreInteractive"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "featureId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "isoDate"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "requirementId"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "SCHEMA_VERSION"
+      },
+      {
+        "file": "src/cli/types.ts",
+        "symbol": "sentence"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "Priority"
+      }
+    ]
+  },
+  "REQUIREMENTS-SMOKE": {}
+}

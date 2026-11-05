@@ -1,0 +1,19 @@
+packages:
+  - packages/*
+includeWorkspaceRoot: false
+catalog:
+  '@types/node': ^26.6.6
+  '@vitest/coverage-v8': 5.0.5
+  '@typescript/native': 'npm:typescript@^7.0.2'
+  typescript: 'npm:@typescript/typescript6@^6.0.2'
+  vitest: 5.0.5
+allowBuilds:
+  esbuild: true
+# Security overrides (same set as sibling workspaces).
+overrides:
+  qs@6: 6.16.1
+  vite@8: 8.1.6
+  nanoid@3: 3.3.18
+  undici@8: 8.12.2
+  glob@13: 14.0.2
+  minimatch@10: 11.0.1

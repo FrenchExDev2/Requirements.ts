@@ -1,0 +1,145 @@
+{
+  "name": "@frenchexdev2/requirements-lib",
+  "version": "0.1.0",
+  "description": "Analysis + specs + schemas + command cores — port-driven, no Commander/clack. Consumable by CLIs, LSPs, and IDE extensions.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./analysis": {
+      "source": "./src/analysis/index.ts",
+      "types": "./dist/analysis/index.d.ts",
+      "import": "./dist/analysis/index.js",
+      "default": "./dist/analysis/index.js"
+    },
+    "./analysis/compliance-core": {
+      "source": "./src/analysis/compliance-core.ts",
+      "types": "./dist/analysis/compliance-core.d.ts",
+      "import": "./dist/analysis/compliance-core.js",
+      "default": "./dist/analysis/compliance-core.js"
+    },
+    "./analysis/compliance-report": {
+      "source": "./src/analysis/compliance-report.ts",
+      "types": "./dist/analysis/compliance-report.d.ts",
+      "import": "./dist/analysis/compliance-report.js",
+      "default": "./dist/analysis/compliance-report.js"
+    },
+    "./analysis/test-smells": {
+      "source": "./src/analysis/test-smells.ts",
+      "types": "./dist/analysis/test-smells.d.ts",
+      "import": "./dist/analysis/test-smells.js",
+      "default": "./dist/analysis/test-smells.js"
+    },
+    "./analysis/behavioral-check": {
+      "source": "./src/analysis/behavioral-check.ts",
+      "types": "./dist/analysis/behavioral-check.d.ts",
+      "import": "./dist/analysis/behavioral-check.js",
+      "default": "./dist/analysis/behavioral-check.js"
+    },
+    "./ac-suggester": {
+      "source": "./src/ac-suggester.ts",
+      "types": "./dist/ac-suggester.d.ts",
+      "import": "./dist/ac-suggester.js",
+      "default": "./dist/ac-suggester.js"
+    },
+    "./audit-hooks": {
+      "source": "./src/audit-hooks.ts",
+      "types": "./dist/audit-hooks.d.ts",
+      "import": "./dist/audit-hooks.js",
+      "default": "./dist/audit-hooks.js"
+    },
+    "./explore-core": {
+      "source": "./src/explore-core.ts",
+      "types": "./dist/explore-core.d.ts",
+      "import": "./dist/explore-core.js",
+      "default": "./dist/explore-core.js"
+    },
+    "./rename-core": {
+      "source": "./src/rename-core.ts",
+      "types": "./dist/rename-core.d.ts",
+      "import": "./dist/rename-core.js",
+      "default": "./dist/rename-core.js"
+    },
+    "./toggling": {
+      "source": "./src/toggling.ts",
+      "types": "./dist/toggling.d.ts",
+      "import": "./dist/toggling.js",
+      "default": "./dist/toggling.js"
+    },
+    "./versioning": {
+      "source": "./src/versioning.ts",
+      "types": "./dist/versioning.d.ts",
+      "import": "./dist/versioning.js",
+      "default": "./dist/versioning.js"
+    },
+    "./watch-core": {
+      "source": "./src/watch-core.ts",
+      "types": "./dist/watch-core.d.ts",
+      "import": "./dist/watch-core.js",
+      "default": "./dist/watch-core.js"
+    },
+    "./schemas/feature-spec.schema.json": "./schemas/feature-spec.schema.json",
+    "./schemas/requirement-spec.schema.json": "./schemas/requirement-spec.schema.json"
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-behavioral-check": "workspace:*",
+    "@frenchexdev2/requirements-compliance": "workspace:*",
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@frenchexdev2/requirements-scaffolders": "workspace:*",
+    "@frenchexdev2/requirements-scanner": "workspace:*",
+    "@frenchexdev2/requirements-spec-io": "workspace:*",
+    "@frenchexdev2/requirements-sync": "workspace:*",
+    "@frenchexdev2/requirements-test-smells": "workspace:*",
+    "@frenchexdev2/requirements-trace": "workspace:*",
+    "@frenchexdev2/requirements-versioning": "workspace:*",
+    "@frenchexdev2/requirements-wizards": "workspace:*",
+    "ajv": "catalog:",
+    "diff": "catalog:",
+    "picocolors": "catalog:",
+    "ts-morph": "catalog:",
+    "tsx": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@frenchexdev2/requirements-styles": "workspace:*",
+    "@frenchexdev2/ts-codegen-pipeline": "0.0.1",
+    "@stryker-mutator/core": "catalog:",
+    "@stryker-mutator/typescript-checker": "catalog:",
+    "@stryker-mutator/vitest-runner": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "fast-check": "catalog:",
+    "ts-json-schema-generator": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "prepublishOnly": "npm run build",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "schemas/**/*.json"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-lib"
+  }
+}

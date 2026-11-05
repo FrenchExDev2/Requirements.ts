@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "noEmit": true,
+    "customConditions": [
+      "source"
+    ]
+  },
+  "include": [
+    "test/integration/**/*.test.ts",
+    "test/support/**/*.ts",
+    "packages/*/test/**/*.ts",
+    "packages/*/requirements/**/*.ts",
+    "vitest*.ts"
+  ]
+}

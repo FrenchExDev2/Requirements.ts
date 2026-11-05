@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://frenchexdev.com/schemas/scenario.schema.json",
+  "title": "Scenario",
+  "description": "Declarative input to the ScenariiPlayer. Drives end-to-end generation of a typed Requirements project through three coordinated FSMs (ProjectLifecycle / PerFeature / PerAc). Hand-written; will be regenerated via ts-json-schema-generator once the types file is frozen.",
+  "type": "object",
+  "required": ["$schemaVersion", "id", "title", "description", "style", "seeds"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON-Schema pointer (IDE autocompletion only)."
+    },
+    "$schemaVersion": {
+      "type": "string",
+      "const": "2026-04-14",
+      "description": "Pinned schema version. Replay safety — a scenario authored against vN is rejected by vN+1 until explicitly migrated."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Stable scenario identifier, kebab-case. Example: 'sis-iec61511-fired-heater'."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable title shown in `scenario list` and `scenario inspect`."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One-paragraph summary of what the scenario demonstrates."
+    },
+    "style": {
+      "type": "string",
+      "minLength": 1,
+      "description": "RequirementStyle to use: one of 'default'|'industrial'|'lean'|'agile'|'kanban' OR a module path that default-exports a RequirementStyle."
+    },
+    "seeds": {
+      "type": "object",
+      "required": ["requirements", "features"],
+      "additionalProperties": false,
+      "description": "Wizard inputs replayed in declaration order. 3-10 entries each (soft convention, not schema-enforced).",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/RequirementSeed" }
+        },
+        "features": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/FeatureSeed" }
+        }
+      }
+    },
+    "targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional runtime targets — AI prompts, expected artifacts, timing budget.",
+      "properties": {
+        "aiPrompts": {
+          "type": "object",
+          "description": "Per-AC prompt template for `--ai` mode. Key format: '<FEAT-ID>.<acName>'.",
+          "additionalProperties": { "type": "string" }
+        },
+        "expectedArtifacts": {
+          "type": "array",
+          "description": "File paths (relative to cwd) that MUST exist after playback. Asserted post-run; failure fails the scenario.",
+          "items": { "type": "string" }
+        },
+        "timingBudget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "totalMs": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Wall-clock budget for the whole scenario in ms."
+            }
+          },
+          "required": ["totalMs"]
+        }
+      }
+    },
+    "narration": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional narration for demo capture.",
+      "properties": {
+        "intro": { "type": "string", "description": "clack.intro() banner." },
+        "outro": { "type": "string", "description": "clack.outro() banner." },
+        "stepDelayMs": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Sleep between FSM transitions (playback pacing)."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "RequirementSeed": {
+      "type": "object",
+      "required": ["id", "title"],
+      "additionalProperties": false,
+      "description": "Partial RequirementSpec. Fields omitted are filled by the wizard's defaults / style template.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^REQ-[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$",
+          "description": "Requirement id. Same pattern as REQUIREMENT_ID_PATTERN in src/cli/types.ts."
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "kind": {
+          "type": "string",
+          "description": "Style-vocabulary entry (validated at playback time against the chosen style)."
+        },
+        "statement": {
+          "description": "EARS statement (one of 6 patterns). Validated against the style's statementPatterns at playback.",
+          "type": "object"
+        },
+        "satisfiedByFeatureIds": {
+          "type": "array",
+          "description": "Forward references to FeatureSeed.id entries. Validated by scenario-validate against seeds.features.",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$"
+          }
+        },
+        "template": {
+          "type": "string",
+          "description": "Style template id (e.g. 'iec61511-sif', 'scrum-story')."
+        }
+      }
+    },
+    "FeatureSeed": {
+      "type": "object",
+      "required": ["id", "title", "acs"],
+      "additionalProperties": false,
+      "description": "Partial FeatureSpec with ACs and their expected test levels.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$",
+          "description": "Feature id. Same pattern as FEATURE_ID_PATTERN in src/cli/types.ts."
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low", "Critical", "High", "Medium", "Low"],
+          "description": "Priority enum label (case-insensitive)."
+        },
+        "satisfies": {
+          "type": "array",
+          "description": "Forward references to RequirementSeed.id entries. Validated by scenario-validate against seeds.requirements.",
+          "items": {
+            "type": "string",
+            "pattern": "^REQ-[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$"
+          }
+        },
+        "acs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name", "expects"],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^[a-z][a-zA-Z0-9]*$",
+                "description": "camelCase AC method name. Same pattern as AC_NAME_PATTERN."
+              },
+              "expects": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "enum": ["unit", "functional", "e2e", "a11y", "i18n", "visual", "perf"]
+                },
+                "description": "TestLevel enum values; at least one required."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

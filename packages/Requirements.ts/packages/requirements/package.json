@@ -1,0 +1,90 @@
+{
+  "name": "@frenchexdev2/requirements",
+  "version": "0.1.0",
+  "description": "Type-safe requirements tracking DSL — Feature, ACs, compliance, trace, scaffold",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "requirements": "./bin/requirements-entry.mjs"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./analysis": {
+      "source": "./src/analysis/index.ts",
+      "types": "./dist/analysis/index.d.ts",
+      "import": "./dist/analysis/index.js",
+      "default": "./dist/analysis/index.js"
+    },
+    "./cli": {
+      "source": "./src/cli/index.ts",
+      "types": "./dist/cli/index.d.ts",
+      "import": "./dist/cli/index.js",
+      "default": "./dist/cli/index.js"
+    },
+    "./ports": {
+      "source": "./src/ports/index.ts",
+      "types": "./dist/ports/index.d.ts",
+      "import": "./dist/ports/index.js",
+      "default": "./dist/ports/index.js"
+    }
+  },
+  "dependencies": {
+    "@clack/prompts": "catalog:",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@frenchexdev2/requirements-compliance": "workspace:*",
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-lib": "workspace:*",
+    "@frenchexdev2/requirements-scaffolders": "workspace:*",
+    "@frenchexdev2/requirements-spec-io": "workspace:*",
+    "@frenchexdev2/requirements-sync": "workspace:*",
+    "@frenchexdev2/requirements-trace": "workspace:*",
+    "@frenchexdev2/requirements-versioning": "workspace:*",
+    "@frenchexdev2/requirements-wizards": "workspace:*",
+    "commander": "catalog:",
+    "diff": "catalog:",
+    "picocolors": "catalog:"
+  },
+  "optionalDependencies": {
+    "@frenchexdev2/requirements-styles": "workspace:*",
+    "@frenchexdev2/requirements-styles-demo": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "ajv": "catalog:",
+    "ts-json-schema-generator": "catalog:",
+    "ts-morph": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:smoke": "vitest run --config vitest.smoke.config.ts",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "bin/"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@frenchexdev2/requirements-scanner",
+  "version": "0.1.0",
+  "description": "AST test-bindings scanner — walks @FeatureTest/@Verifies test files, emits a Feature×AC → SymbolTarget[] manifest. Tier-1 analyzer in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./test-bindings-scanner": {
+      "source": "./src/test-bindings-scanner.ts",
+      "types": "./dist/test-bindings-scanner.d.ts",
+      "import": "./dist/test-bindings-scanner.js",
+      "default": "./dist/test-bindings-scanner.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/ts-codegen-pipeline": "0.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "catalog:peer"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@frenchexdev2/requirements-core": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-scanner"
+  }
+}

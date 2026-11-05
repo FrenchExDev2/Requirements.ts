@@ -1,0 +1,68 @@
+{
+  "name": "@frenchexdev2/requirements-scaffolders",
+  "version": "0.1.0",
+  "description": "TestScaffolder registry + 7 built-in scaffolders (unit / functional / e2e / a11y / i18n / visual / perf). Tier-2 application service in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./scaffold-core": {
+      "source": "./src/scaffold-core.ts",
+      "types": "./dist/scaffold-core.d.ts",
+      "import": "./dist/scaffold-core.js",
+      "default": "./dist/scaffold-core.js"
+    },
+    "./registry": {
+      "source": "./src/scaffolders/registry.ts",
+      "types": "./dist/scaffolders/registry.d.ts",
+      "import": "./dist/scaffolders/registry.js",
+      "default": "./dist/scaffolders/registry.js"
+    },
+    "./port": {
+      "source": "./src/scaffolders/port.ts",
+      "types": "./dist/scaffolders/port.d.ts",
+      "import": "./dist/scaffolders/port.js",
+      "default": "./dist/scaffolders/port.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@frenchexdev2/requirements-compliance": "workspace:*",
+    "@frenchexdev2/requirements-spec-io": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-scaffolders"
+  }
+}

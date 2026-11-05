@@ -1,0 +1,56 @@
+{
+  "name": "@frenchexdev2/requirements-sync",
+  "version": "0.1.0",
+  "description": "Sync core — diff a Spec's proposed generated files against disk (SyncPlan), render colored unified diffs, apply in all / per-file / dry-run modes. Tier-2 application service in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./sync-core": {
+      "source": "./src/sync-core.ts",
+      "types": "./dist/sync-core.d.ts",
+      "import": "./dist/sync-core.js",
+      "default": "./dist/sync-core.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "diff": "catalog:",
+    "picocolors": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-sync"
+  }
+}

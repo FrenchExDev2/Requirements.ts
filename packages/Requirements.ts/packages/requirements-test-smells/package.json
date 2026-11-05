@@ -1,0 +1,58 @@
+{
+  "name": "@frenchexdev2/requirements-test-smells",
+  "version": "0.1.0",
+  "description": "Test-smells detector — AST-level honest detection of declarative ↔ behavior gaps in @FeatureTest/@Verifies test methods. Tier-1 analyzer in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./test-smells": {
+      "source": "./src/test-smells.ts",
+      "types": "./dist/test-smells.d.ts",
+      "import": "./dist/test-smells.js",
+      "default": "./dist/test-smells.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-scanner": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "catalog:peer"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-test-smells"
+  }
+}

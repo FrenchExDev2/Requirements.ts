@@ -1,0 +1,51 @@
+{
+  "name": "@frenchexdev2/rac-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone TypeScript Requirements-as-Code workspace",
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
+  "author": "Stéphane ERARD",
+  "engines": {
+    "node": "^22.22.0 || ^24.0.0 || >=26.0.0"
+  },
+  "license": "Copyright (c) 2026 Stéphane ERARD. All rights reserved.",
+  "scripts": {
+    "build": "pnpm -r --workspace-concurrency=4 run build",
+    "test": "pnpm -r --workspace-concurrency=4 --no-bail run --if-present test --maxWorkers=2",
+    "test:smoke": "pnpm --filter @frenchexdev2/requirements run test:smoke",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "typecheck:ts7": "node scripts/typecheck-ts7.mjs",
+    "typecheck:tests": "tsc -p tsconfig.integration.json",
+    "compliance": "node scripts/qualify-workspace.mjs",
+    "compliance:static": "node scripts/check-workspace-compliance.mjs --static",
+    "qualify": "node scripts/qualify-workspace.mjs",
+    "verify:extraction": "node scripts/verify-extraction.mjs",
+    "test:distribution": "pwsh -NoProfile -File scripts/Test-Distribution.ps1",
+    "verify:policy": "node scripts/check-coverage-policy.mjs",
+    "test:ci": "pnpm run typecheck:tests && pnpm run test && pnpm run test:integration",
+    "test:release": "node --test test/release.test.mjs",
+    "release:prepare": "node scripts/release.mjs prepare",
+    "release:check": "node scripts/release.mjs check",
+    "deps:dev": "node scripts/dependencies.mjs dev",
+    "deps:prod": "node scripts/dependencies.mjs prod",
+    "deps:lock:dev": "node scripts/dependencies.mjs dev --lockfile-only --no-frozen-lockfile --ignore-scripts",
+    "deps:lock:prod": "node scripts/dependencies.mjs prod --lockfile-only --no-frozen-lockfile --ignore-scripts",
+    "deps:recover": "node scripts/dependencies.mjs recover"
+  },
+  "devDependencies": {
+    "@typescript/native": "npm:typescript@7.0.2",
+    "@frenchexdev2/requirements": "workspace:*",
+    "@types/node": "catalog:",
+    "@stryker-mutator/core": "catalog:",
+    "@stryker-mutator/typescript-checker": "catalog:",
+    "@stryker-mutator/vitest-runner": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "fast-check": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@frenchexdev2/ts-codegen-pipeline": "0.0.1",
+    "@frenchexdev2/requirements-shared-kernel": "workspace:^"
+  }
+}

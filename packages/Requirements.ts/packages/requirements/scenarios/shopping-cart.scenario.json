@@ -1,0 +1,73 @@
+{
+  "$schema": "../schemas/scenario.schema.json",
+  "$schemaVersion": "2026-04-14",
+  "id": "shopping-cart",
+  "title": "Shopping cart end-to-end (DefaultStyle / ISO-IEEE 29148 + Volere + EARS)",
+  "description": "Story: a minimal e-commerce stack — cart, checkout, and customer authentication — modelled with the DefaultStyle (ISO/IEC/IEEE 29148 + Volere + EARS). Three requirements motivate three Features: CART (add/remove/update items), CHECKOUT (payment + order creation), and AUTH (login/logout). Twelve ACs total, tested across unit, functional, e2e and a11y test levels. Demonstrates the baseline 4-tier REQ->FEAT->AC->TEST chain with no industry-specific vocabulary.",
+  "style": "default",
+  "seeds": {
+    "requirements": [
+      {
+        "id": "REQ-SHOP-CART-PERSISTS",
+        "title": "Cart content persists across sessions",
+        "kind": "functional",
+        "satisfiedByFeatureIds": ["CART"]
+      },
+      {
+        "id": "REQ-SHOP-CHECKOUT-ATOMIC",
+        "title": "Checkout is atomic (order created or payment rolled back)",
+        "kind": "functional",
+        "satisfiedByFeatureIds": ["CHECKOUT"]
+      },
+      {
+        "id": "REQ-SHOP-AUTH-GDPR",
+        "title": "Authentication respects GDPR data minimisation",
+        "kind": "compliance",
+        "satisfiedByFeatureIds": ["AUTH"]
+      }
+    ],
+    "features": [
+      {
+        "id": "CART",
+        "title": "Shopping cart — add/remove/update line items",
+        "priority": "high",
+        "satisfies": ["REQ-SHOP-CART-PERSISTS"],
+        "acs": [
+          { "name": "addItemAppendsLine", "expects": ["unit"] },
+          { "name": "removeItemDecrementsQuantity", "expects": ["unit"] },
+          { "name": "cartSurvivesBrowserRestart", "expects": ["e2e"] },
+          { "name": "cartKeyboardNavigable", "expects": ["a11y"] }
+        ]
+      },
+      {
+        "id": "CHECKOUT",
+        "title": "Checkout — payment capture + order creation",
+        "priority": "critical",
+        "satisfies": ["REQ-SHOP-CHECKOUT-ATOMIC"],
+        "acs": [
+          { "name": "paymentFailureRollsBackOrder", "expects": ["functional"] },
+          { "name": "successPathCreatesOrderRecord", "expects": ["unit", "e2e"] },
+          { "name": "receiptEmailSentOnce", "expects": ["functional"] }
+        ]
+      },
+      {
+        "id": "AUTH",
+        "title": "Authentication — login/logout with GDPR minimisation",
+        "priority": "high",
+        "satisfies": ["REQ-SHOP-AUTH-GDPR"],
+        "acs": [
+          { "name": "loginAcceptsValidCredentials", "expects": ["unit"] },
+          { "name": "logoutClearsSessionCookie", "expects": ["unit"] },
+          { "name": "passwordFieldIsNotLogged", "expects": ["unit"] },
+          { "name": "loginFormIsScreenReaderFriendly", "expects": ["a11y"] },
+          { "name": "sessionExpiresAfterInactivity", "expects": ["e2e"] }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "intro": "Shopping cart — DefaultStyle demo. Three classic e-commerce Features, twelve ACs, four test levels.",
+    "outro": "Cart, checkout, auth — all green. ISO/IEEE 29148 + Volere + EARS closes cleanly.",
+    "stepDelayMs": 120
+  }
+}

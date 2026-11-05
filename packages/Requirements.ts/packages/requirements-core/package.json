@@ -1,0 +1,92 @@
+{
+  "name": "@frenchexdev2/requirements-core",
+  "version": "0.1.0",
+  "description": "Kernel — base classes, decorators, RequirementStyle abstraction, port types. Zero runtime dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ports": {
+      "source": "./src/ports/index.ts",
+      "types": "./dist/ports/index.d.ts",
+      "import": "./dist/ports/index.js",
+      "default": "./dist/ports/index.js"
+    },
+    "./types": {
+      "source": "./src/types.ts",
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
+    },
+    "./audit-hooks": {
+      "source": "./src/audit-hooks.ts",
+      "types": "./dist/audit-hooks.d.ts",
+      "import": "./dist/audit-hooks.js",
+      "default": "./dist/audit-hooks.js"
+    },
+    "./toggling": {
+      "source": "./src/toggling.ts",
+      "types": "./dist/toggling.d.ts",
+      "import": "./dist/toggling.js",
+      "default": "./dist/toggling.js"
+    },
+    "./explore-core": {
+      "source": "./src/explore-core.ts",
+      "types": "./dist/explore-core.d.ts",
+      "import": "./dist/explore-core.js",
+      "default": "./dist/explore-core.js"
+    },
+    "./rename-core": {
+      "source": "./src/rename-core.ts",
+      "types": "./dist/rename-core.d.ts",
+      "import": "./dist/rename-core.js",
+      "default": "./dist/rename-core.js"
+    },
+    "./watch-core": {
+      "source": "./src/watch-core.ts",
+      "types": "./dist/watch-core.d.ts",
+      "import": "./dist/watch-core.js",
+      "default": "./dist/watch-core.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-shared-kernel": "workspace:^",
+    "diff": "catalog:",
+    "ts-morph": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@vitest/coverage-v8": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-core"
+  }
+}

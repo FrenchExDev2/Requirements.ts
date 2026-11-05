@@ -1,0 +1,82 @@
+{
+  "$schema": "../schemas/scenario.schema.json",
+  "$schemaVersion": "2026-04-14",
+  "id": "user-auth-scrum",
+  "title": "User authentication — Scrum user stories + BDD (AgileStyle)",
+  "description": "Story: a Scrum team delivers a user-authentication epic across three user stories (sign-up, sign-in, password-reset) written in 'As a / I want / So that' form with INVEST validation. A spike precedes implementation. Each story carries Given-When-Then ACs executed at unit, functional and e2e levels. Twelve ACs total. Demonstrates AgileStyle: story-template requirements, BDD fit criteria, sprint-scoped priorities.",
+  "style": "agile",
+  "seeds": {
+    "requirements": [
+      {
+        "id": "REQ-AUTH-STORY-SIGNUP",
+        "title": "As a new user, I want to sign up with email+password so I can access the app",
+        "kind": "user-story",
+        "template": "scrum-story",
+        "satisfiedByFeatureIds": ["SIGNUP"]
+      },
+      {
+        "id": "REQ-AUTH-STORY-SIGNIN",
+        "title": "As a returning user, I want to sign in so I can continue my session",
+        "kind": "user-story",
+        "template": "scrum-story",
+        "satisfiedByFeatureIds": ["SIGNIN"]
+      },
+      {
+        "id": "REQ-AUTH-STORY-PWRESET",
+        "title": "As a user, I want to reset my password via email so I can recover access",
+        "kind": "user-story",
+        "template": "scrum-story",
+        "satisfiedByFeatureIds": ["PWRESET"]
+      },
+      {
+        "id": "REQ-AUTH-SPIKE-JWTLIB",
+        "title": "Spike: evaluate three JWT libraries and pick one",
+        "kind": "spike",
+        "template": "scrum-spike"
+      }
+    ],
+    "features": [
+      {
+        "id": "SIGNUP",
+        "title": "Sign-up — email+password registration with email verification",
+        "priority": "high",
+        "satisfies": ["REQ-AUTH-STORY-SIGNUP"],
+        "acs": [
+          { "name": "givenNewEmailWhenSignupThenAccountCreated", "expects": ["unit", "e2e"] },
+          { "name": "givenDuplicateEmailWhenSignupThenRejected", "expects": ["unit"] },
+          { "name": "givenWeakPasswordWhenSignupThenRejected", "expects": ["unit"] },
+          { "name": "verificationEmailSentWithinFiveSeconds", "expects": ["functional"] }
+        ]
+      },
+      {
+        "id": "SIGNIN",
+        "title": "Sign-in — credential check + session token",
+        "priority": "high",
+        "satisfies": ["REQ-AUTH-STORY-SIGNIN"],
+        "acs": [
+          { "name": "givenValidCredentialsWhenSigninThenTokenIssued", "expects": ["unit"] },
+          { "name": "givenInvalidCredentialsWhenSigninThenRejected", "expects": ["unit"] },
+          { "name": "givenFiveFailuresWhenSigninThenLocked", "expects": ["functional"] },
+          { "name": "sessionSurvivesPageReload", "expects": ["e2e"] }
+        ]
+      },
+      {
+        "id": "PWRESET",
+        "title": "Password reset — email-link flow",
+        "priority": "medium",
+        "satisfies": ["REQ-AUTH-STORY-PWRESET"],
+        "acs": [
+          { "name": "givenEmailWhenResetRequestedThenLinkSent", "expects": ["unit"] },
+          { "name": "givenLinkClickedWhenFreshThenFormShown", "expects": ["e2e"] },
+          { "name": "givenLinkOlderThanOneHourThenExpired", "expects": ["unit"] },
+          { "name": "newPasswordMustDifferFromLastFive", "expects": ["unit"] }
+        ]
+      }
+    ]
+  },
+  "narration": {
+    "intro": "User auth — AgileStyle demo. Three Scrum stories + one spike, BDD Given-When-Then ACs.",
+    "outro": "Sign-up / sign-in / password-reset — all stories Done. INVEST validator green.",
+    "stepDelayMs": 100
+  }
+}

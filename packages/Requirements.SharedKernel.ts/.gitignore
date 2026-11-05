@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+test-results/
+*.tsbuildinfo
+.DS_Store
+*.log
+.turbo/
+.pnpm-store/

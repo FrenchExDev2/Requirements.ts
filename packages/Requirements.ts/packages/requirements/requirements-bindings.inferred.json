@@ -1,0 +1,2334 @@
+{
+  "BASE-TYPES": {
+    "featureClassIsAbstract": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Feature"
+      },
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "priorityEnumExposesAllLevels": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "testLevelEnumExposesAllLevels": [
+      {
+        "file": "src/base.ts",
+        "symbol": "TestLevel"
+      }
+    ]
+  },
+  "COMPLIANCE-CORE": {
+    "collectsAbstractMethodNamesAsAcs": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "defaultsToUnitLevelWhenNoExpects": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "findLatestCoverageHandlesNestedUnitLayout": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageIgnoresNonIsoDirs": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoveragePicksNewestByLexSort": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageReturnsExplicitRunIdMatch": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageReturnsNullForExplicitRunIdWhenAbsent": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageReturnsNullWhenNoCandidates": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageReturnsNullWhenTestResultsMissing": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findLatestCoverageScansAllRunsWithoutRunId": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findLatestCoverageSummary"
+      }
+    ],
+    "findOrphanExcludesClaimedFiles": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findOrphanSourceFiles"
+      }
+    ],
+    "findOrphanHandlesFeatureWithoutDerivedFiles": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findOrphanSourceFiles"
+      }
+    ],
+    "findOrphanReturnsUnclaimedCoverageKeys": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findOrphanSourceFiles"
+      }
+    ],
+    "findOrphanSortsAlphabetically": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "findOrphanSourceFiles"
+      }
+    ],
+    "ignoresExpectsDecoratorWithUnknownLevels": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "ignoresNonClassDeclarations": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "ignoresPropertiesWithNonStringInitializers": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "loadCoverageSummaryExtractsAllPctMetrics": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "loadCoverageSummary"
+      }
+    ],
+    "loadCoverageSummaryNormalizesAllKeys": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "loadCoverageSummary"
+      }
+    ],
+    "loadCoverageSummarySkipsTotalKey": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "loadCoverageSummary"
+      }
+    ],
+    "normalizesAbsolutePosixPath": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "normalizeCoveragePath"
+      }
+    ],
+    "normalizesAbsoluteWindowsPath": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "normalizeCoveragePath"
+      }
+    ],
+    "parsesAbstractExportedFeatureClass": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "parsesEnabledFalseLiteral": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "parsesIdAndTitleFromStringLiterals": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "parsesPriorityFromEnumPropertyAccess": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "preservesRelativePathAndConvertsBackslashes": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "normalizeCoveragePath"
+      }
+    ],
+    "readFeaturesFiltersOutNullParseResults": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "readFeatures"
+      }
+    ],
+    "readFeaturesParsesAllTsFiles": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "readFeatures"
+      }
+    ],
+    "readFeaturesSkipsNonTsFiles": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "readFeatures"
+      }
+    ],
+    "readsExpectsDecoratorEnumArguments": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "readsExpectsDecoratorStringLiteralArguments": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "returnsNullForClassNotExtendingFeature": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "returnsNullForConcreteClass": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "returnsNullForNonExportedClass": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "returnsNullWhenNoFeatureClassFound": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ],
+    "runtimeCoverageAllMissingReturnsMissing": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageAllPresentReturnsOk": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageDisabledFeature": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageNoSourceFiles": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageNullCoverageMap": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageReportsMinLinesPct": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "runtimeCoverageSomeMissingReturnsPartial": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "computeRuntimeCoverage"
+      }
+    ],
+    "unwrapsAsExpressionsOnInitializers": [
+      {
+        "file": "src/analysis/compliance-core.ts",
+        "symbol": "parseFeatureSource"
+      }
+    ]
+  },
+  "COMPLIANCE-REPORT": {
+    "buildByTestFallsBackToFeatureNameWhenNotMapped": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildByTestJson"
+      }
+    ],
+    "buildByTestGroupsByFileThenFeature": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildByTestJson"
+      }
+    ],
+    "buildByTestIncludesTimestamp": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildByTestJson"
+      }
+    ],
+    "buildByTestResolvesFeatureIdFromClassName": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildByTestJson"
+      }
+    ],
+    "buildJsonCollectsCriticalUncoveredAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonComputesTotalAndCoveredAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonCountsDisabledFeatures": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonIncludesTimestampAndFeatures": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonPropagatesOrphanList": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonReportsRuntimeWarningsCount": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "buildJsonSummaryPercentage100WhenNoAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "buildJsonPayload"
+      }
+    ],
+    "computeBindingsFlattensSymbolsIntoArray": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "computeBindingsReturnsBoundWhenAllAcsTargeted": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "computeBindingsReturnsDisabledWhenFeatureDisabled": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "computeBindingsReturnsPartialWhenSomeAcsTargeted": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "computeBindingsReturnsUnboundWhenFeatureMissingFromManifest": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "computeBindingsReturnsUnboundWhenNoManifest": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "computeBindingsSummary"
+      }
+    ],
+    "crossRefBackfillsFeatureIdFromClassName": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefComputesCoveredAndGapLevels": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefDerivesSourceFilesFromManifest": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefFallsBackToUnitWhenNoAcDetails": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefFiltersDerivedFilesByCoverageMap": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefKeepsAllFilesWhenCoverageNull": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefKeepsExistingFeatureId": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefMatchesTestsToAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefReportsPercentageAt100WhenNoAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefReturnsEmptyFilesWhenFeatureAbsentFromManifest": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "crossRefReturnsEmptyFilesWhenNoManifest": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "crossReference"
+      }
+    ],
+    "formatBindingsCellDisabled": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCell"
+      }
+    ],
+    "formatBindingsCellShowsE2eOnly": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCell"
+      }
+    ],
+    "formatBindingsCellShowsTuAndE2e": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCell"
+      }
+    ],
+    "formatBindingsCellShowsTuOnly": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCell"
+      }
+    ],
+    "formatBindingsCellUnboundWhenNoCoverage": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCell"
+      }
+    ],
+    "formatColoredDisabled": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCellColored"
+      }
+    ],
+    "formatColoredShowsFullGlyphAndGreenTu": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCellColored"
+      }
+    ],
+    "formatColoredShowsNoneGlyphWhenAllE2e": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCellColored"
+      }
+    ],
+    "formatColoredShowsPartialGlyphAndYellowE2e": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCellColored"
+      }
+    ],
+    "formatColoredUnbound": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatBindingsCellColored"
+      }
+    ],
+    "formatRuntimeCellDisabled": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "formatRuntimeCellMissing": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "formatRuntimeCellOk": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "formatRuntimeCellOkSingleFile": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "formatRuntimeCellPartial": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "formatRuntimeCellUndeclared": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "formatRuntimeCell"
+      }
+    ],
+    "glyphReturnsBangForOkAcsWithRuntimeWarning": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "glyphFor"
+      }
+    ],
+    "glyphReturnsCheckmarkForFullyCovered": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "glyphFor"
+      }
+    ],
+    "glyphReturnsCrossForIncompleteCoverage": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "glyphFor"
+      }
+    ],
+    "glyphReturnsDisabledForDisabledFeature": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "glyphFor"
+      }
+    ],
+    "hasBareDetectsDescribeCall": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareDetectsItCall": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresBlockComments": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresDoubleQuoteStrings": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresImports": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresLineComments": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresSingleQuoteStrings": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareIgnoresTemplateStrings": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "hasBareReturnsFalseForEmptySource": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "hasBareDescribeOrIt"
+      }
+    ],
+    "renderByTestFallsBackToFeatureNameWhenNotMapped": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderByTest"
+      }
+    ],
+    "renderByTestGroupsByFile": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderByTest"
+      }
+    ],
+    "renderByTestHonoursUseColorFlag": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderByTest"
+      }
+    ],
+    "renderByTestResolvesFeatureIdViaClassToId": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderByTest"
+      }
+    ],
+    "renderConsoleAppendsMissingAcNote": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleIncludesBindingsColumnsWhenRequested": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsolePercentColorsByThreshold": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleProducesHeaderAndSummary": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleQualityGateFailOnCriticalUncovered": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleQualityGatePassWhenClean": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleRendersDisabledRow": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleRendersOrphanSection": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleReportsRuntimeWarningsTally": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleReportsUnboundFeatureList": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleShowsCoverageRunIdWhenLoaded": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleSkipsOrphanSectionWhenFlagOff": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleSourceColorOkNotFull": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleSummaryPercentage100WhenNoAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleUsesColorWhenRequested": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleWarnsWhenBindingsMissing": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "renderConsoleWarnsWhenCoverageMissing": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "scanTestFilesExtractsFeatureTestWithCoversAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesExtractsLegacyFeatTag": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesExtractsVerifiesDecorator": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesHandlesFeatureTestWithoutCoversAcs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesIgnoresNonTsJsFiles": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesInfersA11yLevel": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesInfersE2eLevel": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesInfersPerfLevel": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesInfersUnitLevelByDefault": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesInfersVisualLevel": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesRecursesIntoSubdirectories": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesSkipsMissingDirs": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "scanTestFilesUnnamedTestFallback": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "scanTestFiles"
+      }
+    ],
+    "tableAppliesHeaderAndSeparatorColors": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableComputesWidthFromHeaderMinWidthAndCells": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableDefaultsToLeftAlignment": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableHandlesMissingCellsAsEmpty": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableHonoursRightAlignment": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableProducesHeaderSeparatorAndBody": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableRespectsIndentOption": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableStripsAnsiEscapesWhenMeasuringWidth": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "tableUsesExplicitWidthWhenLarger": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "renderConsole"
+      }
+    ],
+    "traceabilityGlyphDisabled": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "traceabilityGlyph"
+      }
+    ],
+    "traceabilityGlyphFullWhenAllTu": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "traceabilityGlyph"
+      }
+    ],
+    "traceabilityGlyphNoneWhenZeroTu": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "traceabilityGlyph"
+      }
+    ],
+    "traceabilityGlyphPartialWhenMixed": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "traceabilityGlyph"
+      }
+    ],
+    "validateFsmDetectsMachineWithEmptyFeaturesArray": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ],
+    "validateFsmDetectsMachineWithoutFeatures": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ],
+    "validateFsmDetectsUnknownAcOnKnownFeature": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ],
+    "validateFsmDetectsUnknownFeatureId": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ],
+    "validateFsmHandlesMultipleFeatureLinksOnOneMachine": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ],
+    "validateFsmReturnsEmptyBucketsForAllLinked": [
+      {
+        "file": "src/analysis/compliance-report.ts",
+        "symbol": "validateFsmFeatureLinks"
+      }
+    ]
+  },
+  "DECORATORS": {
+    "excludeAddsMethodKeyToExcludedSet": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Exclude"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getExcludedMethods"
+      }
+    ],
+    "expectsIsNoOpAtRuntime": [
+      {
+        "file": "src/base.ts",
+        "symbol": "TestLevel"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Expects"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      }
+    ],
+    "featureTestAutoRegistersWithVitestGlobals": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestBackfillsFeatureNameOnPriorRegistryEntries": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ],
+    "featureTestPassesTimeoutOptionToVitest": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsAutoRegistrationWhenGlobalsAbsent": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsConstructorMember": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsExcludedMethods": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Exclude"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestStampsFeatureMetadataOnClass": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "getExcludedMethodsReturnsExcludedSet": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getExcludedMethods"
+      }
+    ],
+    "getRequirementRegistryReturnsRegisteredRefs": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      }
+    ],
+    "verifiesAddsRefToRegistryWithEmptyFeature": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ],
+    "verifiesCapturesTestClassAndMethodNames": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ]
+  },
+  "SCAFFOLD-CORE": {
+    "buildScaffoldPreservesFeatureMetadata": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "buildScaffoldResult"
+      }
+    ],
+    "buildsE2eScaffoldForE2eLevel": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "buildScaffoldResult"
+      }
+    ],
+    "buildsUnitScaffoldForUnitLevel": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "buildScaffoldResult"
+      }
+    ],
+    "defaultsAcDetailsToUnitWhenMissing": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "e2eReturnsEmptyStringWhenNoUncovered": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "generateE2eTestStub"
+      }
+    ],
+    "emitsE2eStubWithPlaywrightImport": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "generateE2eTestStub"
+      }
+    ],
+    "emitsUnitStubWithFeatureImportAndDecorators": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "generateUnitTestStub"
+      }
+    ],
+    "ignoresAcsAlreadyCoveredAtLevel": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "marksAcsMissingExpectedLevel": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "matchesRefsByClassNameFallback": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "matchesRefsByFeatureIdDirect": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "returnsEmptyStringWhenNoUncovered": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "generateUnitTestStub"
+      }
+    ],
+    "skipsAcsWhereExpectedLevelsOmitTarget": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "findUncoveredACs"
+      }
+    ],
+    "unitStubStripsTsExtensionFromFile": [
+      {
+        "file": "src/cli/scaffold-core.ts",
+        "symbol": "generateUnitTestStub"
+      }
+    ]
+  },
+  "TEST-BINDINGS-SCANNER": {
+    "addsClassEvenWhenNoMethodsHaveBindings": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "aggregateDedupesTargetsByFileAndSymbol": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateFallsBackToClassNameWhenNoIdMapping": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateMergesTargetsAcrossClassesForSameAc": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregatePropagatesParserWarnings": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateRecordsEmptyMethods": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregateUsesClassToIdMapping": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "aggregatesMultipleClassesIntoManifest": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "aggregateTestBindings"
+      }
+    ],
+    "appendsTsExtensionWhenMissing": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "collectCalleeNamesEmptyWhenNoBody": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesFindsCallExpressions": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesFindsNewExpressions": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectCalleeNamesIgnoresNonCallChildren": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      }
+    ],
+    "collectClassHelpersExcludesVerifiesMethods": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectClassHelpersIgnoresAbstractOrComputedNames": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectClassHelpersIncludesNonVerifiesMethods": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      }
+    ],
+    "collectLocalHelpersIgnoresFunctionDeclarationsWithoutBody": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersIgnoresNonFunctionVariables": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksArrowFunctionAssignments": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksFunctionDeclarations": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectLocalHelpersTracksFunctionExpressionAssignments": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      }
+    ],
+    "collectReferencedNamesEmptyWhenNoBody": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesGathersBareIdentifiers": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsDeclarationLhs": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsLabels": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsObjectKey": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsPropertyAccessName": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectReferencedNamesSkipsTypeNodes": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNames"
+      }
+    ],
+    "collectTestFilesHandlesUnreadableDir": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectTestFilesReturnsSorted": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectTestFilesSkipsUnstatableEntries": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectsDefaultImport": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsNamedImports": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsNamespaceImport": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "collectsTestFilesByExtension": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "collectsTestFilesRecursively": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectTestFiles"
+      }
+    ],
+    "dedupesSymbolsWithinMethod": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "diffEmptyForIdenticalManifests": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsAcsOnlyInInferred": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsAcsOnlyInManual": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsFeaturesOnlyInInferred": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsFeaturesOnlyInManual": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsSymbolsOnlyInInferred": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffReportsSymbolsOnlyInManual": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "diffWalksAcsOfFeaturesOnlyInInferred": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "diffManifests"
+      }
+    ],
+    "emitsEmptyTargetsWhenNoMatchingImports": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "extractsAllVerifiesArgsFromMethod": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "extractsFeatureTestArgIdentifier": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "getRootIdentifierReturnsNullForLiteral": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectCalleeNames"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughCallChain": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughElementAccess": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughNonNullAndAs": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughParentheses": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "getRootIdentifierThroughPropertyAccess": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "getRootIdentifier"
+      }
+    ],
+    "handlesClassWithNoModifiers": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "handlesMethodWithStringLiteralName": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "isInScopeReturnsFalseForNoMatch": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "isInScope"
+      }
+    ],
+    "isInScopeReturnsTrueForMatch": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "isInScope"
+      }
+    ],
+    "parsesFeatureTestDecoratedClass": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "preservesExistingTsExtension": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "resolvesRelativeImportToRelPath": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "returnsNullForBareModuleSpecifier": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "resolveTarget"
+      }
+    ],
+    "returnsNullWhenDecoratorNameIsNotFeatureTest": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "returnsNullWhenFeatureTestArgNotIdentifier": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "returnsNullWhenFeatureTestHasNoCallExpression": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractFeatureTestArg"
+      }
+    ],
+    "scanResolvesAbsoluteAndRelativeTestDirs": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanRespectsCustomIncludeScopes": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanReturnsAggregatedManifestStats": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "scanSkipsUnreadableFiles": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "scanTestBindings"
+      }
+    ],
+    "skipsAnonymousClass": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsClassWithoutFeatureTestDecorator": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsImportWithoutClause": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsMethodWithoutVerifiesDecorator": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsNonClassDeclarations": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsNonImportStatements": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsNonMethodMembers": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "parseTestFile"
+      }
+    ],
+    "skipsTypeOnlyImport": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsTypeOnlyNamedSpecifiers": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectImports"
+      }
+    ],
+    "skipsVerifiesIfDecoratorNameDiffers": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "skipsVerifiesWithoutCallExpression": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "skipsVerifiesWithoutStringLiteralArg": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "extractVerifiesArgs"
+      }
+    ],
+    "sortManifestSortsAcsWithinFeature": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "sortManifestSortsFeatureIds": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "sortManifestSortsTargetsByFileThenSymbol": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "sortManifest"
+      }
+    ],
+    "transitiveBreaksCyclesViaVisitedSet": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ],
+    "transitiveResolvesThroughLocalHelper": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectLocalHelpers"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ],
+    "transitiveResolvesThroughThisCallToClassHelper": [
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectClassHelpers"
+      },
+      {
+        "file": "src/analysis/test-bindings-scanner.ts",
+        "symbol": "collectReferencedNamesTransitive"
+      }
+    ]
+  },
+  "TRACE-CORE": {
+    "aggregatesFeaturesAndTestsFromChangedFiles": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryImpact"
+      }
+    ],
+    "buildsChainWithRequirementFsmAndTests": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryChain"
+      }
+    ],
+    "buildsFeatureNodesFromMeta": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "buildsFeatureToFilesFromManifest": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "buildsFeatureToTestsViaFeatureId": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "buildsFileNodesWithFeatureAndTestLinks": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "buildsFileToFeaturesFromManifest": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "buildsRowsWithCoveredAndGapLevels": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryMatrix"
+      }
+    ],
+    "defaultsAcDetailsToUnitWhenMissing": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryGaps"
+      }
+    ],
+    "defaultsMatrixAcDetailsToUnit": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryMatrix"
+      }
+    ],
+    "defaultsMissingFeatureNodeFieldsToEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFileToFeatures"
+      }
+    ],
+    "derivesFileToTestsByJoiningFeatures": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "fallsBackToClassToIdWhenFeatureIdMissing": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "fallsBackToRawFeatureNameWhenClassNotMapped": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "filtersFsmsByNameCaseInsensitive": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFsm"
+      }
+    ],
+    "fragileFallsBackWhenFeatureNodeMissing": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFragile"
+      }
+    ],
+    "handlesEmptyManifestAndEmptyTests": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "handlesFileNodeMissingFeatureLink": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToFiles"
+      }
+    ],
+    "handlesFsmFeatureWithUnknownId": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFsm"
+      }
+    ],
+    "handlesFsmWithoutFeatures": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFsm"
+      }
+    ],
+    "handlesMatrixWithFsmLinkingToFeature": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryMatrix"
+      }
+    ],
+    "handlesUnknownPriorityInImpactSort": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryImpact"
+      }
+    ],
+    "listsAllFsmsWhenNoFilter": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFsm"
+      }
+    ],
+    "listsFilesWithSymbolsForKnownFeature": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToFiles"
+      }
+    ],
+    "mergesAcsAndSymbolsPerFileFeature": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      }
+    ],
+    "normalizesAbsoluteWindowsPath": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "normalizePath"
+      }
+    ],
+    "normalizesRelativePath": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "normalizePath"
+      }
+    ],
+    "rendersChainAllKinds": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderChain"
+      }
+    ],
+    "rendersChainEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderChain"
+      }
+    ],
+    "rendersChainWithoutDetail": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderChain"
+      }
+    ],
+    "rendersFeatureToFilesEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFeatureToFiles"
+      }
+    ],
+    "rendersFeatureToFilesWithSymbols": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFeatureToFiles"
+      }
+    ],
+    "rendersFeatureToFilesWithoutSymbols": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFeatureToFiles"
+      }
+    ],
+    "rendersFeatureToTestsEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFeatureToTests"
+      }
+    ],
+    "rendersFeatureToTestsWithData": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFeatureToTests"
+      }
+    ],
+    "rendersFileToFeaturesEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFileToFeatures"
+      }
+    ],
+    "rendersFileToFeaturesWithData": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFileToFeatures"
+      }
+    ],
+    "rendersFileToTestsEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFileToTests"
+      }
+    ],
+    "rendersFileToTestsGroupedByTestFile": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFileToTests"
+      }
+    ],
+    "rendersFragileBarScaled": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFragile"
+      }
+    ],
+    "rendersFragileEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFragile"
+      }
+    ],
+    "rendersFragileWithZeroMaxCount": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFragile"
+      }
+    ],
+    "rendersFsmEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFsm"
+      }
+    ],
+    "rendersFsmFeatureWithoutTitle": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFsm"
+      }
+    ],
+    "rendersFsmUnlinked": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFsm"
+      }
+    ],
+    "rendersFsmWithFeaturesAndTitle": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderFsm"
+      }
+    ],
+    "rendersGapsAllEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderGaps"
+      }
+    ],
+    "rendersGapsTransitionsWithoutAcs": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderGaps"
+      }
+    ],
+    "rendersGapsUncoveredAcs": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderGaps"
+      }
+    ],
+    "rendersGapsUnlinkedFsms": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderGaps"
+      }
+    ],
+    "rendersHotspotsBarScaled": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderHotspots"
+      }
+    ],
+    "rendersHotspotsEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderHotspots"
+      }
+    ],
+    "rendersHotspotsWithZeroMaxCount": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderHotspots"
+      }
+    ],
+    "rendersImpactWithCriticalAndOther": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderImpact"
+      }
+    ],
+    "rendersMatrixEmpty": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderMatrix"
+      }
+    ],
+    "rendersMatrixExpectedDash": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderMatrix"
+      }
+    ],
+    "rendersMatrixRowsWithCoveredAndGap": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "renderMatrix"
+      }
+    ],
+    "reportsUncoveredAcsMissingLevels": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryGaps"
+      }
+    ],
+    "reportsUnlinkedFsms": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryGaps"
+      }
+    ],
+    "respectsFragileLimit": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFragile"
+      }
+    ],
+    "respectsHotspotsLimit": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryHotspots"
+      }
+    ],
+    "returnsEmptyFeaturesWhenFileUnknown": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFileToFeatures"
+      }
+    ],
+    "returnsEmptyFilesArrayWhenFeatureHasNoFiles": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToFiles"
+      }
+    ],
+    "returnsEmptyTestsWhenFileUnknown": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFileToTests"
+      }
+    ],
+    "returnsEmptyWhenFeatureHasNoTests": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToTests"
+      }
+    ],
+    "returnsFeatureDetailsForKnownFile": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFileToFeatures"
+      }
+    ],
+    "returnsNullForUnknownFeature": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToFiles"
+      }
+    ],
+    "returnsNullForUnknownMatrixFeature": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryMatrix"
+      }
+    ],
+    "returnsNullWhenChainAcUnknown": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryChain"
+      }
+    ],
+    "returnsNullWhenChainFeatureUnknown": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryChain"
+      }
+    ],
+    "returnsNullWhenFeatureUnknownForTests": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToTests"
+      }
+    ],
+    "returnsTestLinksForKnownFile": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFileToTests"
+      }
+    ],
+    "returnsTestsAcrossFileNodesDeduplicated": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFeatureToTests"
+      }
+    ],
+    "skipsDisabledFeaturesInGaps": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryGaps"
+      }
+    ],
+    "skipsFsmsThatDoNotMatchAc": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryChain"
+      }
+    ],
+    "skipsFsmsWithoutFeatures": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryChain"
+      }
+    ],
+    "skipsUnknownFilesInImpact": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryImpact"
+      }
+    ],
+    "sortsFragileByFileCountDesc": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryFragile"
+      }
+    ],
+    "sortsHotspotsByFeatureCountDesc": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryHotspots"
+      }
+    ],
+    "sortsImpactedFeaturesByPriority": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryImpact"
+      }
+    ],
+    "usesClassToIdFallbackInGaps": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryGaps"
+      }
+    ],
+    "usesClassToIdFallbackInMatrix": [
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "buildTraceIndex"
+      },
+      {
+        "file": "src/cli/trace-core.ts",
+        "symbol": "queryMatrix"
+      }
+    ]
+  }
+}

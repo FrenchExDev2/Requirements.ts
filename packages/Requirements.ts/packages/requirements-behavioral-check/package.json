@@ -1,0 +1,58 @@
+{
+  "name": "@frenchexdev2/requirements-behavioral-check",
+  "version": "0.1.0",
+  "description": "Behavioral-check via mutation testing — orchestrates Stryker scoped per Feature.AC. Three pure layers (plan / build-config / classify-verdict). Tier-1 analyzer in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./behavioral-check": {
+      "source": "./src/behavioral-check.ts",
+      "types": "./dist/behavioral-check.d.ts",
+      "import": "./dist/behavioral-check.js",
+      "default": "./dist/behavioral-check.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-scanner": "workspace:*",
+    "@stryker-mutator/core": "catalog:",
+    "@stryker-mutator/vitest-runner": "catalog:",
+    "@stryker-mutator/typescript-checker": "catalog:",
+    "@frenchexdev2/requirements-requirements": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-behavioral-check"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "@frenchexdev2/requirements-wizards",
+  "version": "0.1.0",
+  "description": "Interactive wizards — `feature new` / `requirement new` flow cores + orchestrate-spec-wizard (port-driven, no commander/clack). Tier-2 application service in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./feature-new-core": {
+      "source": "./src/feature-new-core.ts",
+      "types": "./dist/feature-new-core.d.ts",
+      "import": "./dist/feature-new-core.js",
+      "default": "./dist/feature-new-core.js"
+    },
+    "./requirement-core": {
+      "source": "./src/requirement-core.ts",
+      "types": "./dist/requirement-core.d.ts",
+      "import": "./dist/requirement-core.js",
+      "default": "./dist/requirement-core.js"
+    },
+    "./orchestrate-spec-wizard": {
+      "source": "./src/orchestrate-spec-wizard.ts",
+      "types": "./dist/orchestrate-spec-wizard.d.ts",
+      "import": "./dist/orchestrate-spec-wizard.js",
+      "default": "./dist/orchestrate-spec-wizard.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "@frenchexdev2/requirements-spec-io": "workspace:*",
+    "@frenchexdev2/requirements-scaffolders": "workspace:*",
+    "@frenchexdev2/requirements-sync": "workspace:*",
+    "@frenchexdev2/requirements-versioning": "workspace:*",
+    "ts-morph": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@frenchexdev2/requirements-styles": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-wizards"
+  }
+}

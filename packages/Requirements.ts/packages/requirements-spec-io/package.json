@@ -1,0 +1,83 @@
+{
+  "name": "@frenchexdev2/requirements-spec-io",
+  "version": "0.1.0",
+  "description": "Spec serialization (JSON ↔ TS source) + JSON Schema generation/registration + bidirectional sync. Tier-1 in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./spec-from-source": {
+      "source": "./src/spec-from-source.ts",
+      "types": "./dist/spec-from-source.d.ts",
+      "import": "./dist/spec-from-source.js",
+      "default": "./dist/spec-from-source.js"
+    },
+    "./spec-to-source": {
+      "source": "./src/spec-to-source.ts",
+      "types": "./dist/spec-to-source.d.ts",
+      "import": "./dist/spec-to-source.js",
+      "default": "./dist/spec-to-source.js"
+    },
+    "./schema-generate": {
+      "source": "./src/schema-generate.ts",
+      "types": "./dist/schema-generate.d.ts",
+      "import": "./dist/schema-generate.js",
+      "default": "./dist/schema-generate.js"
+    },
+    "./schema-register": {
+      "source": "./src/schema-register.ts",
+      "types": "./dist/schema-register.d.ts",
+      "import": "./dist/schema-register.js",
+      "default": "./dist/schema-register.js"
+    },
+    "./bidi-sync-core": {
+      "source": "./src/bidi-sync-core.ts",
+      "types": "./dist/bidi-sync-core.d.ts",
+      "import": "./dist/bidi-sync-core.js",
+      "default": "./dist/bidi-sync-core.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-compliance": "workspace:*",
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*",
+    "ajv": "catalog:",
+    "ts-morph": "catalog:",
+    "ts-json-schema-generator": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "schemas/"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-spec-io"
+  }
+}

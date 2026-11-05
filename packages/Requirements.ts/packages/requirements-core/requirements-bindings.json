@@ -1,0 +1,195 @@
+{
+  "BASE-TYPES": {
+    "featureClassIsAbstract": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Feature"
+      },
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "priorityEnumExposesAllLevels": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      }
+    ],
+    "testLevelEnumExposesAllLevels": [
+      {
+        "file": "src/base.ts",
+        "symbol": "TestLevel"
+      }
+    ]
+  },
+  "DECORATORS": {
+    "excludeAddsMethodKeyToExcludedSet": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Exclude"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getExcludedMethods"
+      }
+    ],
+    "expectsIsNoOpAtRuntime": [
+      {
+        "file": "src/base.ts",
+        "symbol": "TestLevel"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Expects"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      }
+    ],
+    "featureTestAutoRegistersWithVitestGlobals": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestBackfillsFeatureNameOnPriorRegistryEntries": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ],
+    "featureTestPassesTimeoutOptionToVitest": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsAutoRegistrationWhenGlobalsAbsent": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsConstructorMember": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestSkipsExcludedMethods": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Exclude"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "featureTestStampsFeatureMetadataOnClass": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "FeatureTest"
+      }
+    ],
+    "getExcludedMethodsReturnsExcludedSet": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getExcludedMethods"
+      }
+    ],
+    "getRefinementLinksReturnsRegisteredLinks": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRefinementLinks"
+      }
+    ],
+    "getRequirementRegistryReturnsRegisteredRefs": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      }
+    ],
+    "getSatisfactionLinksReturnsRegisteredLinks": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getSatisfactionLinks"
+      }
+    ],
+    "refinesDecoratorAppendsLinkWithChildAndParentNames": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      },
+      {
+        "file": "src/base.ts",
+        "symbol": "Requirement"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRefinementLinks"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Refines"
+      }
+    ],
+    "satisfiesDecoratorAppendsLinkWithFeatureAndRequirementNames": [
+      {
+        "file": "src/base.ts",
+        "symbol": "Feature"
+      },
+      {
+        "file": "src/base.ts",
+        "symbol": "Priority"
+      },
+      {
+        "file": "src/base.ts",
+        "symbol": "Requirement"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getSatisfactionLinks"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Satisfies"
+      }
+    ],
+    "verifiesAddsRefToRegistryWithEmptyFeature": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ],
+    "verifiesCapturesTestClassAndMethodNames": [
+      {
+        "file": "src/decorators.ts",
+        "symbol": "getRequirementRegistry"
+      },
+      {
+        "file": "src/decorators.ts",
+        "symbol": "Verifies"
+      }
+    ]
+  },
+  "STYLE-REPORTER": {},
+  "STYLE-TEMPLATES": {},
+  "STYLE-TYPE-HELPERS": {},
+  "STYLE-VALIDATORS": {},
+  "STYLE-VOCABULARY": {}
+}

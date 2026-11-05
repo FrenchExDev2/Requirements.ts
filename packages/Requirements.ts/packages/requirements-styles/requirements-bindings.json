@@ -1,0 +1,312 @@
+{
+  "DEFAULT-STYLE-ROBUSTNESS": {
+    "renderStatementNeverCrashesOnRandomInput": [
+      {
+        "file": "src/index.ts",
+        "symbol": "DefaultStyle"
+      }
+    ],
+    "validateSpecNeverCrashesOnRandomInput": [
+      {
+        "file": "src/index.ts",
+        "symbol": "DefaultStyle"
+      }
+    ],
+    "validateStatementNeverCrashesOnRandomInput": [
+      {
+        "file": "src/index.ts",
+        "symbol": "DefaultStyle"
+      }
+    ]
+  },
+  "REQUIREMENT-COMMANDS": {
+    "fromFeatureFlagPreFillsFromExistingFeature": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_TEMPLATES"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_TEMPLATES"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_TEMPLATES"
+      }
+    ],
+    "projectCanDefineCustomRiskTaxonomy": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VOCABULARY"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LeanStyle"
+      }
+    ],
+    "projectCanDefineCustomStatusWorkflow": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VOCABULARY"
+      },
+      {
+        "file": "src/agile.ts",
+        "symbol": "AgileStyle"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "BUILT_IN_STYLES"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "createStyleRegistry"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "DEFAULT_STYLE_REGISTRY"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "DefaultStyle"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "IndustrialStyle"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VOCABULARY"
+      }
+    ],
+    "requirementListShowsCoveragePerRequirement": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_REPORTER"
+      },
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VOCABULARY"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_REPORTER"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VOCABULARY"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_REPORTER"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_REPORTER"
+      }
+    ],
+    "requirementNewLoopsChildFeaturesUntilEnd": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VOCABULARY"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VALIDATORS"
+      }
+    ],
+    "requirementNewPromptsEarsPattern": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VALIDATORS"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LeanStyle"
+      }
+    ],
+    "requirementNewRequiresNonEmptyFitCriterion": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/index.ts",
+        "symbol": "DefaultStyle"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VALIDATORS"
+      }
+    ],
+    "requirementNewWizardCollectsAllFields": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_TEMPLATES"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VALIDATORS"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LeanStyle"
+      }
+    ],
+    "requirementShowReportUsesInverseTerms": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_REPORTER"
+      },
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_REPORTER"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_REPORTER"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_REPORTER"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_VALIDATORS"
+      }
+    ],
+    "requirementSyncReusesDiffCore": [
+      {
+        "file": "src/agile.ts",
+        "symbol": "AGILE_VALIDATORS"
+      },
+      {
+        "file": "src/industrial.ts",
+        "symbol": "INDUSTRIAL_REPORTER"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_REPORTER"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_TEMPLATES"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VALIDATORS"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KANBAN_VOCABULARY"
+      },
+      {
+        "file": "src/kanban.ts",
+        "symbol": "KanbanStyle"
+      },
+      {
+        "file": "src/lean.ts",
+        "symbol": "LEAN_REPORTER"
+      }
+    ]
+  },
+  "StylesBarrelSmokeFeature": {
+    "barrelExportsFivePresets": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ],
+    "barrelExportsRegistry": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ],
+    "presetsAreDistinct": [
+      {
+        "file": "src/index.ts",
+        "symbol": "*"
+      }
+    ]
+  }
+}

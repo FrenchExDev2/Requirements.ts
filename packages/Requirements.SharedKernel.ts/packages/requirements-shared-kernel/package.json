@@ -1,0 +1,59 @@
+{
+  "name": "@frenchexdev2/requirements-shared-kernel",
+  "version": "0.1.0",
+  "description": "Tier-0 shared kernel — zero-dep base types (Feature, Requirement, Priority, TestLevel, ACResult), decorators (@FeatureTest, @Verifies, @Satisfies, @Refines, @Expects, @Exclude, @TypeCheckOnly), branded ID primitives, RequirementStyle abstraction, and external-world ports. Every package in @frenchexdev2/requirements-* depends on this.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ports": {
+      "source": "./src/ports/index.ts",
+      "types": "./dist/ports/index.d.ts",
+      "import": "./dist/ports/index.js",
+      "default": "./dist/ports/index.js"
+    },
+    "./types": {
+      "source": "./src/types.ts",
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "default": "./dist/types.js"
+    },
+    "./participation": {
+      "source": "./src/participation.ts",
+      "types": "./dist/participation.d.ts",
+      "import": "./dist/participation.js",
+      "default": "./dist/participation.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.SharedKernel.ts/packages/requirements-shared-kernel"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "@frenchexdev2/requirements-compliance",
+  "version": "0.1.0",
+  "description": "Compliance core + compliance report — Feature/Requirement scanning, runtime-coverage aggregation, orphan detection, traceability matrix renderer. Tier-1 analyzer in the @frenchexdev2/requirements-* hexagonal architecture.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./compliance-core": {
+      "source": "./src/compliance-core.ts",
+      "types": "./dist/compliance-core.d.ts",
+      "import": "./dist/compliance-core.js",
+      "default": "./dist/compliance-core.js"
+    },
+    "./compliance-report": {
+      "source": "./src/compliance-report.ts",
+      "types": "./dist/compliance-report.d.ts",
+      "import": "./dist/compliance-report.js",
+      "default": "./dist/compliance-report.js"
+    }
+  },
+  "dependencies": {
+    "@frenchexdev2/requirements-core": "workspace:*",
+    "@frenchexdev2/requirements-scanner": "workspace:*",
+    "@frenchexdev2/requirements-requirements": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "catalog:peer"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@typescript/native": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "req:compliance": "node ../../scripts/qualify-workspace.mjs",
+    "req": "requirements",
+    "req:compliance:static": "node ../../scripts/check-workspace-compliance.mjs --static"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Stéphane Erard <stephane.erard@gmail.com> (https://serard.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrenchExDev2/Requirements.ts.git",
+    "directory": "packages/Requirements.ts/packages/requirements-compliance"
+  }
+}

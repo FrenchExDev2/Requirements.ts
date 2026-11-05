@@ -1,0 +1,7 @@
+{
+  "featuresDir": "requirements/features",
+  "bindingsDir": "requirements/bindings",
+  "testDirs": ["test/unit", "test/smoke"],
+  "bindingsManifestPath": "requirements-bindings.json",
+  "reportsDir": "docs/compliance"
+}
